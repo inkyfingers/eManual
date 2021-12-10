@@ -1,0 +1,5086 @@
+﻿Contenu retiré
+
+Qu'y a-t-il dans /e/ ?
+
+/e/ est un écosystème mobile complet qui comprend une ROM et des services en ligne.
+/e/ est
+    Open source
+    Pro-privacy
+    Compatible avec la plupart des applications Android existantes
+    Soucieux de la convivialité
+
+/e/ est une alternative au duopole Apple/Google pour l'utilisateur de smartphone android.
+
+/e/ consiste en :
+    un système d'exploitation mobile installable pour les smartphones, qui est issu d'Android et qui est complètement "non-googlé".
+    un ensemble d'applications open source par défaut qui ont été améliorées et optimisées pour l'utilisateur
+    divers services en ligne liés au système d'exploitation mobile, tels que : un méta-moteur de recherche pour le web, un lecteur de nuage avec synchronisation des données, courrier, calendrier, notes, tâches.
+
+/e/ est également disponible pré-installé sur une gamme de /e/-smartphones.
+
+La ROM /e/ est un fork d'Android et en particulier de la « saveur » LineageOS d'Android.
+
+Actuellement, nous supportons cinq versions d'Android :
+    R
+    Q
+    Pie
+    Oreo
+    Nougat
+
+
+DéGoogling / UnGoogling
+
+L'objectif du "déGoogling" est le suivant :
+    Supprimer ou de désactiver toute fonction ou tout code qui envoie des données aux serveurs de Google
+    Proposer des services en ligne par défaut non Google, notamment pour la recherche.
+    Le moteur de recherche par défaut de Google est supprimé et remplacé par d'autres services (voir ci-dessous dans les applications et services par défaut).
+    Les services Google sont remplacés par microG et des services alternatifs (voir ci-dessous pour plus de détails)
+    Toutes les applications Google sont supprimées et remplacées par des applications Open Source équivalentes. La seule exception est l'application Maps
+    Pas d'utilisation des serveurs Google pour vérifier la connectivité
+    Les serveurs NTP ne sont plus des serveurs Google NTP
+    Les serveurs DNS par défaut ne sont plus Google, et leurs paramètres peuvent être appliqués par l'utilisateur à un serveur spécifique.
+    La géolocalisation utilise les Mozilla Location Services en plus du GPS
+    L'application de gestion et de synchronisation CalDAV/CardDAV (DAVDroid) est entièrement intégrée au compte de l'utilisateur et à l'application de calendrier/contact.
+Interface utilisateur
+
+  
+
+  Un nouveau lanceur "BlissLauncher" a été développé pour offrir un aspect et une sensation attrayants. Ses caractéristiques sont les suivantes
+        Une interface utilisateur facile à comprendre, avec une courbe d'apprentissage quasi inexistante pour les nouveaux utilisateurs.
+        Prise en charge des widgets d'application
+        Utilisation par défaut du moteur de recherche /e/.
+        Des icônes qui ont été conçues spécifiquement pour le projet.
+
+    Améliorations apportées aux paramètres afin d'offrir une interface plus attrayante.
+
+
+
+
+
+
+
+
+
+
+
+
+Services
+    Un service spécifique de synchronisation de fichiers a été développé pour les contenus multimédia et les fichiers.
+
+Il peut utiliser le serveur de services en nuage /e/ à l'adresse https://ecloud.global ou les services en nuage /e/ auto-hébergés (bêta).
+
+    Le fournisseur de météo est le fournisseur de météo LOS utilisant des données récupérées depuis Open Weather Map.
+    Le gestionnaire de comptes a été modifié pour prendre en charge les comptes d'utilisateurs /e/, avec une identité unique, fournissant ainsi aux utilisateurs /e/
+        /e/ email
+        /e/ synchronisation
+        /e/ calendrier
+        /e/ contacts
+        /une note
+        /e/ tâche
+
+L'utilisateur de /e/ peut décider où il souhaite stocker ses données. Il peut s'agir du serveur en nuage ecloud.global, ou d'un système auto-hébergé par l'utilisateur (développement en cours).
+
+
+
+Applications par défaut de /e/
+
+Toutes les applications préinstallées sont des applications open source, à l'exception de l'application Maps (voir les détails à ce sujet dans la FAQ Maps).
+
+    Navigateur web : un fork non googlé de Chromium, construit à partir de patch-sets Bromite, avec des paramètres spécifiques /e/.
+    Mail : un fork de K9-mail pour une meilleure expérience utilisateur, quelques corrections de bogues et la prise en charge de oauth, avec OpenKeyChain pour la prise en charge du cryptage PGP.
+    Message : un fork de QKSMS
+    Camera : un fork de OpenCamera
+    Dialer : application de numérotation Android par défaut
+    Calendar : un fork du calendrier Etar, qui corrige les plantages avec les invitations au calendrier
+    Contact : application de contact Android par défaut
+    Horloge : un fork de l'application deskclock d'Android
+    Gallery : application Android gallery3d par défaut
+    Gestionnaire de fichiers : Application Android documentsui
+    Enregistreur de son : enregistreur de son LineageOS par défaut
+    Calculatrice : application Android calculator2 par défaut
+    Clavier : clavier Android par défaut
+    L'installateur d'applications Android est l'installateur d'applications /e/, qui prend en charge plus de 60 000 applications.
+
+Autres applications préinstallées :
+
+    Cartes : MagicEarth (lisez la FAQ Maps pour plus de détails sur sa licence)
+    Lecteur PDF : PdfViewer Plus
+    Notes : un fork de NextCloud Notes pour supporter les comptes en ligne /e/.
+    Tâches : OpenTasks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Services en ligne /e/ sur ecloud.global
+
+
+
+services en ligne_login_eos_ecloud
+
+ 
+
+
+   /e/ "spot" à https://spot.ecloud.global Le moteur de recherche est un dérivé du métamoteur de recherche SearX. Les améliorations apportées sont les suivantes
+        Amélioration des performances
+        Amélioration de l'interface utilisateur
+
+    /e/ cloud comprend
+        lecteur de nuage
+        courrier électronique
+        calendrier
+        contacts
+        Notes
+        Tâches
+        Office
+
+Il est construit sur NextCloud, Postfix, Dovecot et OnlyOffice.
+
+Il a été intégré pour offrir une identité de connexion unique dans /e/OS ainsi qu'en ligne. accordéon
+
+Les utilisateurs peuvent récupérer leurs données sur les services https://ecloud.global, ou en auto-hébergement sur leur propre serveur.
+
+
+
+/e/ Mises à jour du développement
+
+
+2019
+
+Nous avons résolu un certain nombre de problèmes liés à l'ungoogling.
+
+Cela comprenait entre autres :
+
+    supprimé la vérification de la connectivité contre les serveurs Google
+    remplacement des serveurs NTP de Google par des serveurs pool.ntp.org
+    remplacement des serveurs DNS de Google par 9.9.9.9 par défaut et proposition aux utilisateurs de définir les serveurs DNS de leur choix.
+
+Vous trouverez plus de détails sur l'état de la déGooglisation de /e/ OS dans ce livre blanc.
+
+
+2020
+
+    Nous introduisons le "easy installer". Il permet aux utilisateurs d'installer /e/ OS sans utiliser d'outils obscurs ou la ligne de commande.
+
+    Actuellement disponible sous Linux et Windows. Le développement est maintenant dirigé par la communauté.
+    Nous travaillons sur des fonctionnalités en faveur de la vie privée telles qu'un "tableau de bord de la vie privée".
+    Ajout de plus de smartphones supportés (FairPhone 3 et 3+, PinePhone, GigaSet...)
+    Travaillé sur l'ajout de plus de fonctionnalités telles que "mes SMS dans le nuage" et "ma géolocalisation dans le nuage" (Travail en cours)
+    Ajouté les Progressive Web Apps (PWAs) à l'installateur d'application V2
+
+
+2021
+
+    Ajout de la possibilité de désinstaller certaines des applications système lorsque cela est possible
+    Offrir des SDK correspondants sans Google pour les éditeurs d'applications, car nous pensons que les applications web sont l'avenir de la plupart des applications mobiles.
+    Rendre /e/OS disponible en deux versions :
+        /e/ standard avec des applications par défaut
+        /e/ avec un nombre minimal d'applications par défaut/préinstallées.
+
+            Ceci est partiellement implémenté car certains appareils qui ont moins d'espace disque obtiennent une version MINIMAL_APPS de /e/OS.
+
+
+
+Que peut-on attendre des futures versions ?
+
+Consultez la section « Feuille de Route » de ce manuel.
+
+
+À propos de /e/
+
+
+Est-ce que /e/ est open source ?
+
+Oui - tout le code source est disponible sur notre /e/ Gitlab. Vous pouvez le compiler ou le bifurquer. Certaines applications préconstruites sont utilisées dans le système. Elles sont construites séparément à partir du code source disponible ici ou synchronisées à partir de dépôts open source tels que F-Droid. Nous fournissons cependant une application propriétaire (lire la déclaration).
+
+
+Comment puis-je contribuer à un projet OpenSource comme /e/ ?
+
+Vous pouvez contribuer au projet /e/ de la manière suivante :
+    Rejoignez l'un des projets /e/ à la recherche de contributeurs.
+    Aidez l'équipe de développement en résolvant les problèmes énumérés ici.
+    Commencez à construire /e/ pour un nouvel appareil et devenez un mainteneur de ROM.
+
+Si vous avez des suggestions, n'hésitez pas à nous contacter ! Envoyez un courriel à join@e.email, avec un objet clair comme (Développeur de ROM : appareils Mediatek, Développeur de projet : application mail).
+
+
+Est-ce que /e/ est une combinaison de LineageOS et microG ?
+
+/e/ est une bifurcation de LineageOS. Cela étant dit, nous avons apporté plusieurs modifications au code. En voici quelques-unes :
+
+    Nous avons modifié plusieurs parties de la procédure d'installation du système, l'organisation des paramètres, les paramètres par défaut.
+    Nous avons désactivé et/ou supprimé tout logiciel ou service qui envoyait des données personnelles à Google (par exemple, le moteur de recherche par défaut n'est plus Google).
+    Nous avons intégré microG par défaut, remplacé certaines des applications par défaut, et modifié d'autres.
+    Nous avons ajouté un service logiciel d'arrière-plan de synchronisation qui synchronise les contenus multimédias (images, vidéos, audio, fichiers...) et les paramètres vers un lecteur de nuage, lorsqu'il est activé.
+    Nous avons également remplacé le lanceur LineageOS par notre propre lanceur. Écrit à partir de zéro, le lanceur Bliss a un look et une sensation totalement différents de LineageOS.
+    Nous avons mis en place plusieurs services en ligne /e/, avec une seule identité d'utilisateur /e/ (user@e.email). Cette infrastructure sera proposée sous forme d'images docker pour l'auto-hébergement : drive, email, calendrier... à ceux qui préfèrent l'auto-hébergement.
+    Nous avons ajouté un gestionnaire de compte dans le système avec le support de l'identité unique. Il permet aux utilisateurs de se connecter une seule fois, avec une simple identité "user@e.email", pour avoir accès aux différents services en ligne de /e/ (lecteur, email, calendrier, notes, tâches).
+
+Puis-je personnaliser moi-même la ROM ?
+
+Absolument ! /e/ n'a pas été conçu pour les geeks ou les utilisateurs chevronnés. Elle est conçue pour offrir une alternative crédible et attrayante à l'utilisateur moyen. Il offre plus de liberté à l'utilisateur et un meilleur respect de la confidentialité des données de l'utilisateur par rapport aux systèmes d'exploitation mobiles offerts par le duopole mondial en place.
+
+Nous apprécions vraiment votre participation. Vos tests bêta et vos précieux commentaires nous aideront à mettre cette alternative à la disposition de beaucoup plus de personnes qui ne peuvent pas faire ce genre de choses elles-mêmes.
+
+N'hésitez pas à partager vos ROM non officielles ou personnalisées /e/ sur notre forum.
+
+
+Puis-je obtenir le look par défaut d'AOSP/LineageOS sur /e/OS ?
+
+La beauté de l'OS est que les utilisateurs peuvent installer des applications et personnaliser l'apparence de l'OS. Vous pouvez installer un lanceur de votre choix et obtenir l'apparence que vous préférez.
+
+
+Est-ce que /e/OS vole le travail des développeurs de LineageOS ?
+
+Nous utilisons les règles du logiciel libre. Tout comme AOSP-Android a forcé le travail du noyau Linux, tout comme LineageOS a forcé le travail d'AOSP, /e/OS a forcé la base de code de LineageOS.
+
+Pour trouver l'argument LineageOS vs /e/OS, pensez à Debian vs Ubuntu.
+/e/OS se concentre sur l'expérience finale de l'utilisateur final, et moins sur le matériel.
+
+Les objectifs et les utilisateurs cibles de /e/ et LineageOS sont différents.
+Nous encourageons fortement les développeurs principaux à contribuer en amont à LineageOS.
+
+
+Est-ce que /e/ dispose d'un moyen simple pour mettre à jour le système régulièrement ?
+
+Oui, nous disposons d'une fonction de mise à jour Over The Air (OTA) en 1 ou 2 clics, accessible depuis les paramètres.
+
+Si vous avez déjà /e/OS sur votre téléphone, vous pouvez vérifier les mises à jour en allant dans :
+Paramètres >> Mises à jour du système >> Appuyez sur l'icône de la flèche circulaire pour déclencher manuellement une mise à jour.
+
+S'il y a des mises à jour du système, elles s'afficheront immédiatement à l'écran.
+Veillez à vérifier les mises à jour par le biais d'une connexion wifi non mesurée ou vous risquez d'encourir des frais.
+
+Comment puis-je savoir si mon appareil est pris en charge ?
+
+Voici la liste des appareils pris en charge
+
+Vous pouvez vérifier s'il existe des versions non officielles, créées par la communauté. Celles-ci sont visibles ici
+
+Si votre téléphone ne figure pas dans ces listes, vous pouvez demander une assistance pour celui-ci sur notre forum communautaire. Nous évaluons l'assistance téléphonique en fonction des demandes les plus populaires et de la faisabilité. Plus d'informations à cette adresse
+
+
+A partir de quelle version d'Android /e/ a bifurqué ?
+
+    Android 11 (R)/LOS 18 (branche /e/-0.x-R).
+    Android 10 (Q)/LOS 17 (branche /e/-0.x-Q).
+    Android 9 (Pie)/LOS 16 (/e/-0.x-P branch).
+    Android 8 (Oreo)/LOS 15 (/e/-0.x-O branch).
+    Android 7 (Nougat)/LOS 14 (branche /e/-0.x-N).
+
+
+Est-ce que /e/ est stable ?
+
+Non, nous sommes en phase bêta pour le moment. Cela dit, le système est assez utilisable, mais nous vous suggérons de l'utiliser à vos propres risques !
+
+
+Pourquoi avez-vous choisi ce nom introuvable pour le système d'exploitation ?
+Nous avons dû changer notre nom pour des raisons légales, comme expliqué ici.
+
+/e/ est une représentation textuelle de notre symbole "e" qui signifie "mes données sont MES données".
+
+Si vous cherchez "/e/OS" ou "/e/ OS" dans les moteurs de recherche, vous nous trouvez immédiatement.
+
+Cependant, nous convenons que taper /e/ dans la barre de recherche du navigateur ne fonctionne pas car le navigateur finit par vérifier la structure du dossier local !
+
+Nous prévoyons de continuer à utiliser le nom /e/OS pour le système d'exploitation lui-même, du moins pendant un certain temps.
+Murena - le nom de marque
+
+Le 19 octobre 2021, nous avons annoncé notre nom de marque. Il s'agit de Murena
+
+Pour plus de détails, consultez cet article publié sur Medium.
+
+
+
+Comment /e/OS se compare-t-il aux autres systèmes d'exploitation axés sur la confidentialité ?
+
+Si vous recherchez un système d'exploitation à la sécurité renforcée, utilisez Graphene, si vous recherchez un système d'exploitation qui vous aide à protéger vos données contre Google, utilisez /e/ . Le choix dépend de vos besoins.
+
+La vie privée est un besoin communément admis. Vous pouvez avoir l'appareil le plus sécurisé, mais cela ne changera rien au fait que vos données seront constamment transmises à Google ou à Facebook . La confidentialité zéro peut être atteinte de manière très sécurisée.
+
+Il peut y avoir des cas où la sécurité soutient la vie privée, par exemple si votre appareil est volé ou si vous êtes la cible d'une organisation, etc.
+
+Le monde idéal est donc un mélange de sécurité et de confidentialité.
+Téléphones /e/
+
+Proposez-vous des téléphones préchargés avec /e/ ?
+
+Oui - Des smartphones neufs et reconditionnés, flashés avec /e/OS, sont disponibles dès maintenant.
+
+
+Comment puis-je accéder au pays de mon choix sur votre site web ?
+
+Pour voir cette liste de pays
+    Allez sur notre site eShop
+    Dans la barre de navigation, vous verrez une liste déroulante comme indiqué dans la capture d'écran ci-dessous.
+
+La liste déroulante par pays affiche les informations suivantes
+    La dernière liste des pays dans lesquels nous vendons nos appareils
+
+En sélectionnant une nation particulière, vous pourrez voir
+    Les appareils disponibles à la vente dans ce pays particulier.
+
+
+Est-il possible de changer la langue du site eShop ?
+
+Oui, c'est possible. Sur la barre de navigation, vous verrez l'option pour changer la langue.
+
+Actuellement, nous prenons en charge les langues suivantes
+    Anglais
+    Français
+    Allemand
+
+
+Est-il possible d'installer et d'utiliser les applications du Google Play store sur le /e/OS ?
+
+Un large éventail d'applications peut être installé sur le /e/OS. Nous nous assurons de cela pour conserver une compatibilité maximale ainsi que pour répondre à un plus grand nombre d'utilisateurs.
+
+Cela dit, toutes les applications disponibles ne fonctionnent pas forcément. Les applications qui nécessitent la base de code complète de Google pour fonctionner peuvent ne pas fonctionner sur /e/OS.
+
+Vous pouvez consulter cette liste d'applications qui fonctionnent ou ne fonctionnent pas sur /e/OS.
+Vous trouverez ici une liste axée sur les applications bancaires qui fonctionnent avec /e/OS.
+
+Nous travaillons à l'amélioration de la couverture des applications.
+Changer la langue du système eOS
+
+
+
+Mission :
+
+Apprendre à configurer et définir une langue différente pour l'interface /e/OS
+
+
+Prérequis :
+
+    Un téléphone avec /e/OS
+
+C'est parti.
+
+    Ouvrez les paramètres /e/OS et faites défiler la liste vers le bas pour ouvrir les paramètres système.
+
+
+
+
+
+
+
+
+
+    Dans les paramètres du système, ouvrez " Langues et saisie " et appuyez sur " Langues " dans cette zone.
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+    Tapez sur "+ Ajouter une langue" pour ajouter la langue de votre choix.
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  Sélectionnez la langue souhaitée. Par exemple, Hindi comme indiqué dans l'image ci-dessous.
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   Une fois la langue souhaitée ajoutée, appuyez et maintenez-la enfoncée pour la faire glisser vers le haut ou en premier lieu. Le tour est joué. Il change instantanément la langue pour vous.
+
+
+
+
+
+Bravo ! Vous avez maintenant changé la langue. C'est simple, n'est-ce pas ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gérer deux cartes SIM
+
+
+Mission :
+
+Connaître les différentes options SIM que vous obtenez lorsque vous insérez deux cartes SIM dans votre smartphone fonctionnant sous /e/OS.
+
+
+Conditions préalables :
+
+    Un smartphone avec /e/OS avec deux cartes SIM actives insérées dedans.
+    Patience pour manipuler les paramètres de /e/OS.
+
+C'est parti.
+
+0. Dès que vous insérez la 2ème carte SIM dans votre téléphone.
+
+Vous remarquerez deux barres de signal distinctes pour les deux réseaux dans la " barre d'état " et dans le bas du " menu déroulant des paramètres rapides ", juste en dessous des tuiles.
+
+
+
+
+L'image ci-dessous montre que j'ai deux cartes SIM insérées, une de JIO et une autre du réseau mobile Vodafone.
+
+
+
+
+
+
+1. Allez dans /e/OS Settings pour ouvrir Network & Internet settings dans cette section.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Dans les paramètres Réseau et Internet, naviguez jusqu'aux paramètres des cartes SIM.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dans les paramètres des " cartes SIM ", vous voyez à la fois les réseaux et leurs emplacements de carte SIM spécifiques. Vous voyez également les options "SIM préférée pour" pour définir la SIM par défaut pour un usage spécifique.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Options " SIM préférée pour ".
+
+    Données mobiles
+
+Vous pouvez sélectionner Données mobiles pour définir la carte SIM à utiliser pour les "Données mobiles", comme le montre l'image ci-dessous.
+
+
+
+
+
+
+
+
+
+
+
+
+Cela peut prendre quelques secondes pour changer de carte SIM pour les données mobiles.
+
+
+
+
+
+
+
+    Appels
+
+Il y a une option intéressante appelée " Demander à chaque fois ". Si elle est sélectionnée, il vous sera demandé de choisir une carte SIM pour chaque appel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sélectionnez SIM 1 ou 2 pour un appel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+Conseil de pro : Il est préférable de ne pas choisir cette option, car vous pouvez toujours choisir de sélectionner la carte SIM que vous souhaitez utiliser pour un appel ou un SMS, quelle que soit la carte SIM préférée.
+
+Pour choisir une carte SIM à partir du composeur pour un nouveau numéro. Tapez sur l'icône à gauche du numéro composé pour accéder au sous-menu "Appeler par" comme indiqué dans les images ci-dessous.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pour choisir une carte SIM dans les contacts pour un appel. Ouvrez un contact et appuyez sur le numéro et maintenez-le enfoncé pendant une seconde pour ouvrir l'option " Appeler via ", comme indiqué dans l'image ci-dessous.
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  SMS
+
+
+
+
+
+
+Lorsque vous tapez un texte ou un SMS, vous remarquerez que la carte SIM par défaut ou préférée est mentionnée à gauche du bouton Envoyer. Par exemple, dans l'image ci-dessus, la carte SIM 1 est l'option préférée.
+
+Il vous suffit de taper dessus pour passer à une autre carte SIM pour ce SMS ou ce texte spécifique, comme le montre l'image ci-dessous.
+
+
+
+
+
+
+
+4. Désactiver un emplacement de carte SIM à partir des paramètres
+
+Dans les paramètres des cartes SIM, vous pouvez désactiver un emplacement SIM spécifique en appuyant sur le commutateur radio à bascule situé à droite de l'emplacement SIM.
+
+L'emplacement SIM 1 avec le réseau mobile Jio est désactivé dans l'image ci-dessous. Remarquez que toutes les cartes SIM préférées pour les paramètres basculent automatiquement vers le seul réseau disponible maintenant.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. Option Kit d'outils SIM
+
+Parfois, il se peut que vous voyiez une nouvelle icône sur l'écran d'accueil lors de l'insertion d'une deuxième carte SIM, appelée " SIM Tool Kit ". Il n'y a absolument pas lieu de paniquer, car certaines cartes SIM prennent en charge les options traditionnelles du kit SIM, comme c'est le cas sur certains téléphones.
+
+
+
+
+
+
+
+
+
+Il s'agit de paramètres spécifiques au réseau de la carte SIM.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Applications
+
+
+Pourquoi ne pas mettre en open source toutes vos applications préinstallées ?
+
+À l'exception de l'application Maps (Magic Earth), toutes nos applications système par défaut sont open source. Vous trouverez l'explication du choix de Magic Earth ici.
+
+
+Où peut-on voir le code des applications open source que vous avez créé ?
+
+Vous pouvez parcourir les projets sur notre gitlab et consulter le code source.
+
+Par exemple, pour trouver le code de l'application Mail, vous pouvez regarder ici.
+
+Pour obtenir des liens vers l'emplacement du code source de chacune de nos applications système par défaut, consultez le document de description du produit ici.
+
+
+Pourquoi ne contribuez-vous pas en amont ?
+
+Nous contribuons en amont
+
+    quand c'est possible
+    lorsque le projet en amont l'accepte
+    lorsqu'une contribution en amont a un sens.
+
+Cependant, nous avons observé qu'à moins que les contributions ne concernent des corrections de bogues triviales, dans 99% des cas, les fusions sont rejetées. La raison de ce rejet est que les mainteneurs du projet amont ont leurs propres idées sur leur projet, ses fonctionnalités, son interface utilisateur, ses couleurs, etc. et ne sont pas prêts à accepter nos suggestions ou nos modifications de code.
+
+C'est la raison principale pour laquelle la bifurcation est courante dans les projets open source.
+
+
+Des efforts sont-ils encore en cours pour amener Magic Earth à mettre son application en open source ?
+
+Notre projet de discuter avec Magic Earth a été reporté en raison de la pandémie. Nous espérons pouvoir discuter avec eux et progresser sur ce sujet cette année. Toutefois, nous gardons nos options ouvertes.
+
+Nous recherchons d'autres applications de cartes disponibles qui ne nécessitent pas que l'utilisateur télécharge constamment des versions plus récentes des cartes. Cela rendrait l'expérience utilisateur plus fluide et consommerait moins de bande passante. Le plus important est que l'application soit Open Source, conformément à nos idéaux.
+
+
+
+Installateur d'Applications
+
+D'où viennent les apps de l'application /e/ Installer ?
+
+Les applications disponibles dans l'installateur /e/ sont des applications open source que vous pouvez trouver sur Fdroid, et des applications Android gratuites, comme celles que vous pouvez trouver sur Google Play Store. L'installateur d'applications /e/ s'appuie sur un dépôt d'applications tiers appelé cleanapk.org.
+
+Certaines applications Web mobiles et applications Web progressives (PWA) sont également disponibles via l'installateur d'applications /e/.
+
+
+Où se trouve la base du code source de l'installateur de l'application /e/ ?
+
+Vous pouvez consulter le code ici https://gitlab.e.foundation/e/apps/apps
+
+
+Existe-t-il un moyen simple de savoir si une application que je souhaite est disponible dans l'App Store /e/ ?
+
+Vous pouvez rechercher le nom de l'application dans l'Application Checker.
+
+
+Comment puis-je demander qu'une application soit ajoutée à la bibliothèque ?
+
+Les utilisateurs peuvent demander qu'une application spécifique soit répertoriée en effectuant une requête directement dans l'installateur de l'application /e/ (Paramètres > Demander une application).
+
+
+Quelles informations sont fournies pour chaque application dans le programme d'installation de l'application /e/ ?
+
+Pour l'instant, chaque application présente une note de confidentialité. À l'avenir, l'évaluation des utilisateurs et le score énergétique seront également disponibles. Nous fournirons également des évaluations classiques des utilisateurs pour les aider à faire un meilleur choix.
+
+L'évaluation de la confidentialité fournit une liste des traceurs et des autorisations demandées dans le cadre de l'installation de ces applications (Remarque : ces données sont calculées par le logiciel Exodus Privacy). L'évaluation énergétique fournit des détails sur la quantité d'énergie consommée par l'application pour fonctionner. Veuillez noter que certaines de ces fonctionnalités sont en cours de développement.
+
+
+Comment puis-je m'assurer que les applications contenues dans le programme d'installation ne sont pas falsifiées mais "originales" ?
+
+Les applications sont vérifiées à l'aide d'une signature PGP ou d'une somme de contrôle.
+
+Si vous soupçonnez qu'une application a été falsifiée, nous vous demandons de le signaler ici support@e.email et nous prendrons les mesures appropriées en vous tenant informé.
+
+Les téléphones équipés de /e/OS prennent-ils en charge les empreintes digitales, les applications bancaires et Android Auto ?
+Serais-je toujours en mesure d'utiliser des applications comme Uber ?
+Est-il possible d'utiliser des applications que j'ai achetées sur le Google Play Store ou qui ont été achetées dans l'application ?
+
+La plupart des applications sont compatibles et fonctionnent. Nous travaillons avec le fondateur de MicroG pour améliorer le support et la compatibilité.
+
+Vous pouvez vérifier la disponibilité des applications ici
+
+Vous pouvez consulter une liste des applications qui fonctionnent et de celles qui ne fonctionnent pas ici.
+
+Certains utilisateurs installent également Aurora Store pour accéder à n'importe quelle application Android gratuite sur Play Store.
+
+
+Que faire si vous ne trouvez pas une application que vous souhaitez utiliser dans l'installateur d'applications /e/ ?
+
+Si vous ne trouvez pas une application Android que vous souhaitez utiliser, vous pouvez d'abord la demander dans l'installateur d'applications.
+
+La procédure pour demander une application sur l'App Store de /e/ est la suivante
+
+    	Appuyez sur l'icône Apps
+	Dans la barre de tâches Apps	vous verrez Paramètres > Demander une application et dans la zone de texte, indiquez le nom du package de l'application que vous souhaitez ajouter.
+    	Pour obtenir le nom du paquet, vous pouvez
+        Aller sur la boutique Google Play.
+       Sélectionner la page de téléchargement de votre application.
+
+            Par exemple, supposons que vous souhaitiez ajouter l'application Radar Covid à la boutique Google Play.
+
+        Lorsque vous ouvrez la page de téléchargement de l'application sur le Google Play Store, vérifiez l'URL de la page - le nom du paquet sera les deux derniers mots qui, dans ce cas, seraient es.gob.radarcovid.
+        Copiez-le et collez-le dans la zone de texte
+        Appuyez sur le bouton Soumettre
+
+        Vous verrez un message de réussite s'afficher car la demande est acceptée.
+
+        Si l'application a déjà été demandée, vous verrez un message indiquant qu'elle a déjà été demandée.
+
+    Vous pouvez également chercher une alternative sur le web. Par exemple, plusieurs services sont disponibles avec des applications Web progressives qui peuvent être utilisées sur le mobile.. : Uber, Twitter, Starbucks, Certaines banques offrent également des services web comme alternative aux applications natives. Pour un accès plus facile, un raccourci vers le service web peut facilement être ajouté au /e/ BlissLauncher, en utilisant le navigateur web.
+
+Combien de temps faut-il pour qu'une application que j'ai demandée apparaisse dans le /e/ Apps Store ?
+
+Il faut compter environ une semaine pour que l'application apparaisse dans le /e/ Apps Store après la demande.
+
+Si une application n'apparaît pas dans le /e/ Apps Store même après deux semaines après avoir soumis la demande, veuillez soulever un problème dans le /e/ Gitlab avec tous les détails.
+
+
+L'installateur d'applications /e/ télécharge des paquets depuis cleanapk.org Qui se cache derrière tout cela et pourquoi une personne soucieuse du respect de la vie privée lui ferait-elle confiance ?
+
+Ils veulent probablement rester privés. Notre stratégie dans ce domaine est la suivante
+
+    Demander à nos utilisateurs de signaler tout problème avec un paquet fourni par CleanAPK, par exemple si un paquet est suspecté d'avoir été modifié depuis la source originale. Jusqu'à présent (plus de deux ans), les seuls problèmes que nous avons rencontrés étaient des paquets périmés.
+
+    Nous essayons de trouver des moyens (techniques) de prouver qu'un APK n'a pas été modifié à partir de la source. C'est facile avec les paquets qui viennent de F-Droid car il y a une signature, mais ce n'est pas le cas pour les paquets qui viennent du Play Store.
+
+    Nous évaluons différentes options pour les applications à l'avenir. Il pourrait s'agir d'un nouveau "magasin" où les éditeurs pourraient pousser leurs applications, une alternative à Google Play. Nous prenons également en charge un grand nombre de PWA dans /e/OS.
+
+    Nous attendons que les autorités publient davantage de réglementations à ce sujet. Par exemple, dans l'UE, il est probable que Google et Apple devront permettre aux utilisateurs d'utiliser des magasins d'applications alternatifs.
+
+
+Comment /e/ a-t-il appris l'existence de CleanAPK ? Je n'en ai jamais entendu parler auparavant et il ne semble pas qu'ils dépensent beaucoup d'efforts en publicité :)
+
+Les gens nous contactent tout le temps à propos de nouveaux projets, et nous avons décidé d'aller de l'avant avec CleanAPK comme installateur d'applications par défaut avec la meilleure expérience utilisateur possible pour le plus grand nombre d'utilisateurs.
+
+
+Où puis-je trouver plus d'informations sur CleanApk ?
+
+Vous pouvez consulter la page d'information de leur site Web pour obtenir plus de détails.
+
+
+Est-ce que /e/ envisage de lancer une boutique d'applications payantes ? Il semble que vous pourriez attirer de nombreux développeurs/éditeurs en prenant une plus petite part du prix d'achat que ne le fait Google sur sa boutique d'applications.
+
+Oui, nous pourrions envisager quelque chose de ce genre à l'avenir.
+
+
+Applications Web progressives (PW)
+
+Une autre option consiste à rechercher une alternative web. Plusieurs services sont disponibles avec des applications Web progressives qui peuvent être utilisées sur le mobile.. : Uber, Twitter, Starbucks.....
+
+Certaines banques proposent également des services web comme alternative aux applications natives.
+
+Pour un accès plus facile, un raccourci vers le service web peut facilement être ajouté au /e/ BlissLauncher, en utilisant le navigateur web.
+
+
+Magasins d'applications alternatifs
+
+Certains utilisateurs rapportent avoir réussi à utiliser des applications téléchargées à partir des magasins Yalp ou Aurora. Veuillez noter que ces magasins exigent que l'utilisateur autorise l'installation d'applications tierces dans les paramètres /e/OS.
+
+Les autres options que les utilisateurs peuvent essayer sont UpToDown, APKpure...
+
+Créer un compte /e/ gratuit
+
+Avantages d'un compte /e/
+
+    disposer d'une nouvelle adresse email de marque @e.email
+
+    disposer d'une identité unique pour accéder à tous les services /e/ :
+        /e/ Email : username@e.email
+        /e/ Drive : photos, vidéos, documents...
+        /e/ Calendrier
+        /e/ Contacts
+        /e/ Notes
+        /e/ Tâches
+    dans votre smartphone /e/ et en ligne sur : https://ecloud.global
+
+
+Comment obtenir votre compte /e/ gratuit ?
+
+    Allez sur https://e.foundation/e-mail-invite/ vous devriez voir un écran comme celui-ci
+
+   
+
+ Et suivez les étapes ci-dessous :
+        entrez votre adresse email actuelle
+        attendez une invitation dans votre boîte aux lettres ! En général, cela prend moins de 2 minutes. Vérifiez votre boîte SPAM !
+
+Commencez
+
+
+    Après avoir cliqué sur le lien dans l'email d'invitation, vous pouvez procéder à la création du compte :
+
+
+Création de votre propre compte /e/ @e.email
+
+    Remplissez correctement les champs ! Cet exemple va créer une identité /e/ en tant que John Doe john.doe@e.email
+    Votre nom d'utilisateur peut contenir des lettres latines (a-z), des chiffres (0-9) et des caractères spéciaux (- . _)
+    Votre nom d'utilisateur doit comporter au moins 3 caractères et au plus 30 caractères.
+    Votre nom d'utilisateur ne doit pas contenir de caractères spéciaux successifs.
+    Votre nom d'utilisateur ne doit pas commencer ou se terminer par des caractères spéciaux.
+    Veuillez noter que votre nom d'utilisateur sera automatiquement converti en minuscules lors de la création du compte (par exemple, "John.Doe@e.email" devient "john.doe@e.email").
+
+
+
+
+Utilisation d'un compte /e/ @e.email
+
+    Maintenant que votre compte /e/ est créé, vous pouvez l'utiliser dans votre smartphone /e/. 
+        Dans l'assistant de première utilisation, juste après l'installation du système d'exploitation /e/.
+        Vous pouvez ajouter un compte en allant à .
+
+         Paramètres >> Comptes >> Ajouter un compte >> /e/
+
+    Sur le web à https://ecloud.global pour retrouver toutes les photos, vidéos que vous avez prises avec votre smartphone /e/
+    Pour accéder sur l'ecloud à tous vos emails et consulter votre agenda
+
+
+
+Vous avez des difficultés à créer un compte /e/ @e.email ?
+
+    Si vous n'avez jamais reçu l'invitation sur votre email actuel, vérifiez les dossiers SPAM de votre client de messagerie.
+    Si vous ne pouvez pas vous connecter dans votre smartphone /e/ ou sur https://ecloud.global, essayez de réinitialiser votre mot de passe avec le lien de réinitialisation disponible sur https://ecloud.global.
+    Assurez-vous d'utiliser votre username@e.email comme adresse électronique pour le processus de réinitialisation, et NON votre adresse électronique de récupération.
+    Si cela ne fonctionne pas, contactez-nous à l'adresse contact@e.email.
+
+
+
+Comment puis-je supprimer mon compte /e/ @e.email ?
+
+    Connectez-vous à votre compte ecloud en utilisant l'identifiant que vous souhaitez supprimer.
+    Faites une sauvegarde de vos données et de vos emails (si nécessaire) avant de procéder.
+    Cliquez sur l'image de votre profil
+    Un menu s'ouvre alors
+    Cliquez sur Paramètres
+    Cela affichera les options de réglage comme indiqué dans la capture d'écran ci-dessous
+
+
+
+    Cliquez sur "Supprimer le compte".
+    Cela ouvrira un écran avec le texte "Cochez cette case pour confirmer la demande de suppression".
+    Sélectionnez la case à cocher
+    Cliquez sur le bouton "Supprimer mon compte".
+    L'opération peut prendre jusqu'à une minute. Veuillez patienter
+
+        Cette action supprimera votre ID /e/ et votre compte ecloud, les données stockées sur ecloud le cas échéant et tous les e-mails.
+
+    Vous serez déconnecté d'ecloud.global.
+    La suppression du compte /e/ est terminée
+
+        En cas de problème, veuillez envoyer les détails à support@e.email.
+
+
+
+Quelques conseils supplémentaires sur votre compte /e/ @e.email
+
+    Votre identité /e/ sur ecloud.global n'est pas (encore) compatible avec nos différents sites web et forums.
+    Cela signifie que vous devrez créer un login/mot de passe spécifique sur community.e.foundation, gitlab.e.foundation et e.foundation (boutique).
+    N'essayez pas de vous connecter dans votre smartphone /e/ avec votre identité communautaire ou gitlab. Cela ne fonctionnera pas.
+
+    Votre identité /e/ est sous cette forme : username@e.email
+
+    C'est aussi votre adresse e-mail. Oui. " .email " est une extension valide sur internet, comme .com, .org, .xyz et des milliers d'autres.
+    Et oubliez username@e.email.org, nous ne possédons pas le domaine email.org.
+
+
+
+Vous voulez configurer manuellement votre client de messagerie pour /e/ ?
+
+La plupart des clients de messagerie devraient pouvoir configurer votre ID /e/ automatiquement, une fois que vous avez saisi votre nom d'utilisateur et votre mot de passe /e/. Si cela n'est pas possible, veuillez utiliser ces paramètres pour effectuer une configuration manuelle :
+
+Serveur SMTP/IMAP : mail.ecloud.global
+Nom d'utilisateur SMTP/IMAP : votre adresse e-mail /e/ en entier (exemple : john.doe@e.email)
+Mot de passe SMTP/IMAP : votre mot de passe /e/ email
+Port SMTP : 587, mot de passe simple, STARTTLS, nécessite une authentification
+Port IMAP : 993, SSL/TLS, authentification requise
+Options de stockage
+
+    Votre compte gratuit est limité à 1 Go de stockage en ligne.
+
+    Nous avons maintenant des plans de stockage premium disponibles. Vous pouvez également passer à 20 Go tout en soutenant le projet /e/ en devenant un /e/ Early Adopter.
+
+N'OUBLIEZ PAS que le lecteur et les comptes de messagerie /e/ Free sont financés par des dons !
+
+Soutenez-nous maintenant et recevez un cadeau.
+
+
+Un compte /e/ est-il obligatoire pour utiliser /e/OS ?
+
+    Un compte /e/ sur ecloud.global n'est pas obligatoire pour utiliser /e/OS, mais est fortement recommandé si vous voulez bénéficier de l'expérience /e/ complète telle que décrite dans ce guide.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Changer la sonnerie de votre téléphone sur /e/OS en une mélodie personnalisée ou une chanson de votre choix.
+Conditions préalables :
+
+    Fichier audio téléchargé dans l'un des 46 formats de fichier ou type de codec pris en charge.
+
+
+
+
+
+
+
+
+
+
+
+
+
+C'est parti.
+
+ 1)   Ouvrez /e/OS Settings et naviguez jusqu'à Sound settings therein et ouvrez-les.
+ 
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+    Faites défiler vers le bas dans les paramètres de son et tapez sur Avancé
+
+
+
+  
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Sous Paramètres sonores avancés, faites défiler jusqu'à trouver et tapez sur Sonnerie du téléphone.
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+   Une page avec une liste de sonneries apparaît, faites défiler jusqu'à trouver et tapez sur '+ Add Ringstone' pour sélectionner le fichier audio téléchargé.
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Le nom du fichier audio apparaît maintenant comme sonnerie de téléphone à utiliser. Sélectionnez la sonnerie de votre choix et appuyez sur OK.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Voilà ! Ta chanson ou ton morceau audio préféré est maintenant la sonnerie de ton téléphone. Profitez-en !
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epingler sur l’écran
+
+
+Mission :
+
+En savoir plus sur l'épinglage d'écran, son utilisation et comment l'activer pour épingler des applications spécifiques à l'écran.
+
+    Parfois, vous ressentez le besoin de verrouiller une application spécifique de votre téléphone /e/ à l'écran avec un mot de passe. Par exemple, lorsque vous donnez votre /e/phone à votre enfant pour jouer à un jeu ou regarder une émission. Ou lorsque vous permettez à une personne que vous connaissez moins, par exemple un collègue de travail, de voir les résultats de son sport favori sur une application pendant un voyage.
+
+Conditions préalables :
+
+    Un smartphone avec /e/OS
+    Patience pour manipuler les paramètres /e/OS
+
+C'est parti.
+
+    Ouvrez les paramètres /e/OS et faites défiler vers le bas pour accéder aux paramètres de "Sécurité et localisation".
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   Dans les paramètres de " Sécurité et localisation ", faites défiler l'écran vers le bas et appuyez sur " Avancé " pour entrer dans " Épinglage d'écran ".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+   Dans la page " Épinglage de l'écran ", basculez le bouton radio pour l'activer et assurez-vous que l'option " Demander un mot de passe avant d'épingler " est également activée, comme le montre l'image ci-dessous.
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Une fois cela fait, naviguez vers l'application que vous souhaitez épingler à l'écran et accédez à l'écran d'accueil (pour les besoins de ce guide, utilisons le navigateur). Depuis l'écran d'accueil, utilisez le bouton physique/touch gauche ou un glissement vers le haut pour accéder à la vue d'ensemble de l'application, comme le montre l'image ci-dessous.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tapez sur l'icône " épingler " en bas à droite, comme le montre l'image ci-dessous.
+
+
+
+
+
+
+
+Tout est prêt, tapez sur " J'ai compris " après avoir lu les instructions et l'application souhaitée, le navigateur dans ce cas, est maintenant épinglée.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Si vous essayez de quitter ou de changer d'application, vous recevrez des instructions pour enlever l'épinglage de l'écran.
+
+
+
+
+
+
+
+
+Appuyez sur le bouton Back et maintenez-le enfoncé pour déverrouiller l'écran en entrant le mot de passe/passphrase de votre téléphone ou utilisez votre biométrique pour le déverrouiller. Une fois cette opération effectuée, l'application souhaitée n'est plus épinglée à l'écran.
+
+
+
+
+
+
+Cela fonctionne avec la plupart des applications utilisateur ou système, des jeux, etc.	
+Captures d’écrans
+
+
+Mission :
+
+Apprenez à faire une capture d'écran et à la recadrer, si nécessaire. Partagez-la également via l'application de messagerie instantanée ou par e-mail.
+Conditions préalables :
+
+    Un téléphone avec /e/OS
+    Une application de messagerie électronique ou de messagerie instantanée ou tout autre moyen de partager votre capture d'écran.
+
+C'est parti.
+
+1. Faites une capture d'écran
+
+Ouvrez ou naviguez jusqu'à l'application ou l'écran que vous souhaitez capturer. Par exemple, je dois faire une capture d'écran de la page Firefox Lockwise (un gestionnaire de mots de passe de Mozilla) à partir de /e/ Apps Store.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ce que je souhaite capturer, c'est la liste des "traqueurs" intégrés à cette application. Faites défiler l'écran vers le bas et tapez sur Trackers pour voir la liste. Elle s'ouvre.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Appuyez maintenant sur le bouton d'alimentation physique de votre téléphone et maintenez-le enfoncé jusqu'à ce qu'un menu latéral apparaisse, tapez sur Capture d'écran pour en faire une comme indiqué dans l'image ci-dessus. Vous pouvez également faire une capture d'écran rapide en appuyant simultanément sur la touche Vol. et le bouton d'alimentation.
+
+
+2. Recadrer une capture d'écran [Optionnel]
+
+Parfois, vous souhaitez partager une zone sélectionnée d'une capture d'écran. Vous pouvez rapidement modifier une capture d'écran pour la recadrer. Une fois que vous avez fait une capture d'écran, une notification s'affiche avec les options disponibles, à savoir Partager, Modifier et Supprimer.
+
+
+
+Tapez sur Editer pour sélectionner la fonction Recadrage qui est la troisième option du menu de boutons de l'éditeur d'images intégré.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sélectionnez de nouveau la fonction Recadrage dans le sous-menu pour marquer la zone à recadrer à partir d'une capture d'écran, puis tapez sur l'icône " Coche " en bas à droite de l'écran pour afficher l'image recadrée.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Appuyez sur Enregistrer en haut à droite pour terminer le recadrage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Partager une capture d'écran
+
+Vous pouvez rapidement partager une capture d'écran directement à partir de la zone de notification lorsque vous prenez une capture d'écran pour la première fois en sélectionnant " Partager " ou la modifier, puis l'ouvrir en appuyant sur " Partager " en bas de la visionneuse d'images.
+
+Voici l'ensemble des options de partage que vous voyez sur votre téléphone en fonction des applications installées :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3a. Partager par e-mail
+
+Une fois que vous avez sélectionné une capture d'écran à " partager ", appuyez sur Mail et il utilisera automatiquement le compte de messagerie par défaut et annexera votre capture d'écran à celui-ci. Saisissez l'adresse électronique du destinataire pour envoyer la capture d'écran.
+
+
+
+3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b. Partager par messagerie instantanée comme Telegram
+
+Une fois que vous avez sélectionné une capture d'écran à " Partager ", appuyez sur votre application de messagerie instantanée préférée comme Telegram ou Rocket.chat ou autre. Dans les images suivantes, à titre d'exemple, Telegram est utilisé.
+
+Vous sélectionnez une réception ou plus.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Appuyez sur le bouton Envoyer en bas à droite pour partager la capture d'écran.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Synchroniser vos données existantes (contacts, événements du calendrier, e-mails, etc.).
+
+Depuis un compte /e/
+
+    Accédez aux paramètres système > Utilisateurs et comptes ("Comptes" si vous êtes sous Android Nougat) > Ajouter un compte > /e/.
+    Saisissez votre adresse électronique /e/ et votre mot de passe. Ensuite, cliquez sur "Connexion".
+    Votre compte a été ajouté à /e/ !
+
+Désormais, vos contacts, événements de calendrier, courriers, notes et tâches /e/ s'afficheront automatiquement dans les apps respectives.
+
+Remarque : il peut s'écouler quelques minutes avant que vos contacts n'apparaissent dans l'application Contacts.
+
+
+À partir d'un compte Google
+
+    Accédez aux paramètres système > Utilisateurs et comptes ("Comptes" si vous êtes sous Android Nougat) > Ajouter un compte > Google.
+    Vous serez redirigé vers une page Web de connexion Google sur votre navigateur par défaut. Saisissez-y votre identifiant et votre mot de passe Gmail.
+    Si l'authentification à deux facteurs est activée pour votre compte, vous devrez peut-être suivre des instructions supplémentaires à l'écran avant de continuer.
+    Il vous sera demandé d'autoriser le "gestionnaire de compte" à accéder à vos contacts, votre agenda et votre messagerie Google. Cliquez sur "Autoriser".
+    Votre compte a été ajouté à /e/ !
+
+Désormais, vos contacts Google, vos événements de calendrier et votre courrier apparaîtront automatiquement dans les applications respectives.
+
+Remarque : il peut s'écouler quelques minutes avant que vos contacts ne s'affichent dans l'application Contacts.
+
+
+Maintenant que tous vos contacts ne sont plus qu'à quelques touches, allez-y et parlez-leur de /e/ ! 
+
+
+
+
+Désactiver la synchronisation automatique des contacts, photos et vidéos de votre smartphone vers /e/Cloud. 
+
+Elle est activée par défaut pour des raisons de facilité d'utilisation jusqu'à présent. Les instructions suivantes vous aideront certainement à la maintenir en local.
+Conditions préalables :
+    Un téléphone fonctionnant sous /e/OS et configuré avec le compte /e/.
+
+C'est parti.
+
+1)    Ouvrez les paramètres /e/OS pour accéder aux paramètres des comptes.
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+2)   Tapez sur votre compte /e/ pour accéder aux paramètres de synchronisation des comptes.
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3)   Dans les paramètres de synchronisation du compte, vous pouvez désactiver la synchronisation des "carnets d'adresses" et des "photos et vidéos", comme le montre l'image ci-dessous.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Les médias et les contacts de votre téléphone ne seront plus synchronisés avec le /e/Cloud.
+Apprenez à transférer vos données, 
+y compris les médias [photos, vidéos, etc.], de/vers un PC ou un Mac via un câble USB.
+
+Conditions préalables :
+
+    Un téléphone avec /e/OS avec câble USB compatible
+    Un PC ou un Mac avec un port USB compatible.
+    [Dans le cadre de ce guide, nous utiliserons un PC portable fonctionnant sous Debian GNU/Linux].
+
+C'est parti.
+
+1. Branchez le câble de votre téléphone sur le téléphone et sur le port pris en charge du PC ou du Mac.
+
+Une notification sur le téléphone apparaît immédiatement comme dans l'image ci-dessous.
+
+
+
+
+
+
+
+Tapez dessus pour accéder aux " Préférences USB " et utiliser l'USB pour le " Transfert de fichiers ".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ouvrez votre gestionnaire de fichiers pour accéder au stockage interne de votre appareil.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+accès au gestionnaire de fichiers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vous pouvez accéder aux photos de votre appareil en entrant dans le sous-dossier Camera du répertoire DCIM de votre PC.
+
+
+
+
+
+
+
+
+
+
+Les photos de l'appareil photo du téléphone dans le gestionnaire de fichiers du PC :
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   Le transfert de données vers ou depuis votre téléphone n'est plus qu'une question de fonctions copier/coller, comme pour n'importe quelle clé USB ou clé USB. Vous pouvez même faire un glisser-déposer si vous le souhaitez. Il n'y a absolument rien de spécial à ce sujet pour s'affoler ici.
+
+
+2. Transférer des données vers le téléphone /e/
+
+Pour les besoins de ce guide, sélectionnons un dossier aléatoire appelé "Sample pictures" à partir de Downloads on PC avec trois images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Il suffit de sélectionner le dossier sur PC, de copier le répertoire avec 'Ctrl + C' sur PC ou 'Cmd + C' sur Mac sur le clavier.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Appuyez sur 'Ctrl + V' ou 'Cmd + V' sur le clavier pour le coller dans le stockage interne de votre smartphone dans le gestionnaire de fichiers. C'est simple, c'est fait. C'est tout.
+
+
+
+Vous pouvez le vérifier en le contrôlant dans le gestionnaire de fichiers de votre téléphone /e/.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. N'oubliez pas d'éjecter ou de démonter votre appareil ou smartphone avant de débrancher le câble.
+
+Naviguez dans le gestionnaire de fichiers de votre PC pour " éjecter ou démonter " votre smartphone avant de débrancher votre appareil afin d'éviter toute perte de données.
+
+
+
+
+
+
+
+Démontez
+
+Une fois éjecté, débranchez votre téléphone.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Modes d’affichages et conseils de santé
+
+Mission :
+
+Apprendre les différents modes d'affichage dont le mode nuit, le mode lecture qui peuvent apporter un meilleur kilométrage à long terme pour votre santé.
+
+
+Conditions préalables :
+
+    Un smartphone avec /e/OS
+    Patience pour manipuler les paramètres de /e/OS.
+
+C'est parti.
+
+    Ouvrez les paramètres /e/OS et faites défiler vers le bas pour ouvrir les paramètres d'affichage.
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  Dans les paramètres d'affichage, ouvrez " LiveDisplay " et appuyez sur " Mode d'affichage ".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dans les options du mode d'affichage, appuyez sur " Automatique " pour activer le changement automatique des modes Jour/Nuit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ces modes activent un filtre de lumière spécifique qui atténue la lumière bleue émise par l'écran de votre smartphone afin de réduire considérablement la tension sur vos yeux et d'éviter les dommages dus à une utilisation prolongée. Il vous aide également à rester mentalement détendu car il est doux pour les yeux.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  Il existe des applications de " filtre de lumière bleue " avec des traceurs malveillants dans les magasins d'applications propriétaires ou alternatifs, il est recommandé de ne pas les utiliser. Comme la plupart de ces applications ne vous aideront pas beaucoup par rapport au mode d'affichage "Jour/Nuit" qui est disponible depuis Android 7.1 ou plus récent.
+
+
+Lorsqu'ils sont activés, les modes d'affichage donnent à l'écran une teinte jaunâtre ou rougeâtre en fonction de la mise en œuvre, comme le montre l'image ci-dessous avec le mode activé à gauche et désactivé à droite.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+   Le mode nuit ne doit pas être confondu avec le thème ou l'habillage sombre du système.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mode lecture
+
+Dans les paramètres de LiveDisplay, il existe un mode de lecture dédié qui active le mode d'affichage en niveaux de gris pour la lecture à long terme. Ce mode élimine également la lumière bleue, qui est bien connue pour avoir un impact drastique sur vos cycles de sommeil et vos yeux.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Les téléphones dotés d'un grand écran ou les phablets sont utilisés par de nombreux utilisateurs pour lire des e-mails, des livres électroniques et des journaux électroniques. 
+
+Le " mode lecture " ci-dessus peut s'avérer très utile dans ce cas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Apprendre à mettre à jour le logiciel /e/OS.
+
+    Conseil de pro : Il est conseillé de mettre à jour votre logiciel /e/OS à temps car il peut contenir des mises à jour critiques pour votre système.
+
+Conditions préalables :
+
+    Un téléphone avec /e/OS
+
+C'est parti.
+
+1   Ouvrez les paramètres /e/OS et faites défiler vers le bas pour ouvrir les paramètres système.
+
+
+
+
+
+
+
+
+
+2
+
+
+
+
+2  Dans les paramètres système, appuyez sur "Avancé" pour ouvrir l'outil "Updater".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dans l'outil Updater, une mise à jour devrait s'afficher si vous n'avez pas effectué de mise à jour depuis un certain temps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Si ce n'est pas le cas, appuyez sur le bouton " Rafraîchir " en haut à droite pour vérifier s'il y a une mise à jour.
+
+
+
+
+Une fois que vous voyez une ou plusieurs mises à jour, appuyez sur " TÉLÉCHARGER " pour obtenir la dernière mise à jour. Si vous êtes sur 'Mobile data', vous recevrez un avertissement, passez en WiFi si vous le souhaitez et appuyez sur 'DOWNLOAD' pour continuer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vous pouvez interrompre ou reprendre un téléchargement en cours si nécessaire.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Une fois le téléchargement terminé, vous recevrez une notification de l'outil " Updater ".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Appuyez sur " Installer " pour continuer.
+
+
+
+
+
+
+
+
+Enfin, appuyez sur OK pour entrer en mode récupération, afin de mettre à jour /e/OS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/e/OS se prépare à la mise à jour du système.
+
+
+
+
+
+
+
+
+
+
+
+Votre appareil redémarre en mode de récupération et effectue le Magic et le boot vers /e/OS une fois terminé.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Votre /e/OS est maintenant mis à jour à la dernière version.
+
+
+
+
+
+
+Retrouvez votre vie privée ! Adoptez /e/ le système d'exploitation mobile et les services en ligne non Google 6phone
+
+
+
+
+
+
+
+
+
+
+
+Comment mettre à jour n’importe quel smartphone sous /e/.
+1) Mettre à jour à l’aide d’un ordinateur
+    1. Téléchargez la nouvelle version disponible pour votre appareil sur votre ordinateur.
+
+    2. Mettez votre smartphone en mode de récupération, c’est à dire accédez à TWRP.
+    3. Branchez votre smartphone à votre ordinateur.
+    4. Copiez/collez le dossier .zip précédemment téléchargé dans le stockage interne de votre smartphone, hors du dossier TWRP.
+       
+       peripherique706×361 22.1 KB 
+
+
+    5. Sur votre smartphone, au menu principal de TWRP, cliquez sur “Install”.
+       
+       20190411_1011341836×3264 2.21 MB 
+    6. Rendez vous plus bas à partir de 2) B) 3.
+2) Mettre à jour en OTA
+Pour mettre à jour en OTA (Over The Air, c’est à dire sans ordinateur) :
+    1. Rendez vous dans Paramètres > Système > À propos du téléphone > System updates
+(Peut varier si /e/ pour votre appareil est fondé sur Android Nougat et non Oreo comme ici)
+    2. Cliquez sur les 3 petits points en haut à droite puis “Préférences” et activez “Supprimer les mises à jour une fois installées” pour gagner de l’espace de stockage.
+       
+       20190414_192436%5B1%5D1836×3264 2.15 MB 
+       
+    3. Si une nouvelle version est disponible, cliquez sur “TÉLÉCHARGER”.
+       
+       20190412_1818301836×3264 2.63 MB 
+    4. Une fois la MàJ (Mise à Jour) téléchargée, cliquez sur “INSTALLER”.
+       
+       20190412_1821071836×3264 2.41 MB 
+    5. Lisez le message d’infirmation et cliquez sur “OK” pour poursuivre.
+       
+       20190412_1821141836×3264 2.23 MB 
+       
+       
+       20190412_1821361836×3264 2.21 MB 
+A) Cas où la MàJ se fait automatiquement
+Félicitations, je n’ai pas eu cette chance.
+B) Cas où la MàJ doit se faire manuellement
+Le smartphone a redemarré en mode de récupération, c’est à dire que TWRP s’est ouvert et que vous êtes sur le menu principal.
+    1. Cliquez sur “Install”.
+       
+       20190411_1011341836×3264 2.21 MB 
+    2. Nous allons nous rendre dans le dossier où la MàJ a été téléchargée.
+Cliquez sur “(Up A Level)” > “data” > “lineageos_updates”.
+       
+       20190412_1833181836×3264 2.19 MB 
+       
+       
+       20190412_1833511836×3264 2.2 MB 
+    3. Cliquez sur le fichiez en .zip correspondant à la MàJ désirée.
+    4. Pour confirmer le flash de votre smartphone, glissez la flèche “Swipe to confirm Flash” de gauche à droite.
+       
+       20190411_1016491836×3264 2.07 MB 
+    5. Une barre bleue de chargement devrait apparaitre. Au bout de quelques minutes tout au plus, l’installation est terminée.
+       
+       20190411_1455221836×3264 2.16 MB 
+       
+Si vous rencontrez une erreur 7 (“Error 7”), référez vous à ce sujet 2.
+    6. Cliquez sur “Wipe cache/dalvik” en bas à gauche, confirmez si nécessaire.
+       
+       20190411_1457021836×3264 2.14 MB 
+    7. Cliquez sur “Reboot System”.
+ATTENTION : au fil du temps, les mises à jours téléchargées vont prendre beaucoup de place sur votre espace de sockage si vous n’avez pas activé l’option “Supprimer les mises à jours une fois installées” dans les “Préférences” de la page de mise à jour. N’hésitez donc pas à les supprimer à l’aide de TWRP :
+    1. Dans le menu principal de TWRP, cliquez sur “Advanced”.
+    2. Cliquez sur “File Manager”.
+    3. Rendez vous dans data/lineageos_updates.
+    4. Cliquez sur le fichier de mise à jour dont vous n’avez plus besoin.
+    5. Cliquez sur “Delete” et confirmez si nécessaire.	
+Comment réinitialiser mon appareil ?
+Quand mon écran n'est pas disponible
+
+    Installer adb (doc ici)
+    Redémarrer l'appareil en mode récupération
+
+    adb shell twrp wipe data (doc ici)
+
+        /Cette commande ne formate que les données de l'application. Les fichiers sont toujours présents sur le stockage interne.
+
+    adb shell rm -rf /sdcard/* supprimer les fichiers du stockage interne
+
+
+
+Apprenez à réinitialiser en réglages d’usine votre smartphone fonctionnant sous /e/OS
+
+    Conseil de pro : il est conseillé de réinitialiser votre smartphone en réglages d’usine avant de le vendre.
+
+Conditions préalables :
+    Un téléphone avec /e/OS
+
+C'est parti.
+
+    Avant de continuer, ce n'est PAS quelque chose que vous voulez faire à moins qu'on vous le demande à cause d'un bug critique du système. Effectuer une réinitialisation d'usine sur votre téléphone /e/ supprimera toutes les données de votre téléphone qui sont stockées localement et non téléchargées sur le /e/cloud. Les sauvegardes sont vitales.
+
+1)    Ouvrez les paramètres /e/OS et faites défiler vers le bas pour ouvrir les paramètres système.
+
+
+
+
+
+
+
+
+
+ 2)   Dans les paramètres système, appuyez sur "Avancé" pour ouvrir la fenêtre "Réinitialiser les options".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dans 'Options de réinitialisation', appuyez sur 'Effacer toutes les données (réinitialisation d'usine)' pour continuer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Faites défiler vers le bas pour parcourir la liste de vos comptes et activer le bouton de réinitialisation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Appuyez sur "Réinitialiser le téléphone" pour continuer.
+
+
+
+
+
+
+Il vous sera demandé de " Saisir le mot de passe de votre appareil " manuellement pour poursuivre le processus. Une fois cette opération effectuée, votre appareil redémarrera pour effacer le stockage du téléphone et toutes les données qu'il contient.
+
+Après le redémarrage, une nouvelle configuration d'usine /e/OS vous sera présentée pour que vous puissiez la configurer depuis le début.
+
+    Remarque : la réinitialisation d'usine efface uniquement les données internes et le cache du téléphone. Elle ne couvre PAS la carte SD, sauf si elle est montée comme stockage interne. Veillez à la traiter séparément.
+Services
+
+
+Existe-t-il un moyen de vérifier facilement si les services offerts par /e/ sont en ligne ?
+
+Vous pouvez vérifier l'état des services de /e/ à cette adresse.
+
+
+Mes données sur les serveurs /e/ sont-elles cryptées ?
+
+    Tous les fichiers ecloud sont cryptés par un cryptage côté serveur.
+    Toutes les sauvegardes sont cryptées
+    Un véritable cryptage E2E (end to end) pour les fichiers ecloud, un cryptage complet des bases de données et un cryptage des courriers électroniques sont prévus à long terme.
+
+
+Puis-je supprimer mon identifiant /e/ ?
+
+Oui, vous pouvez le faire. Reportez-vous à ce document pour comprendre comment cela peut être fait.
+
+
+Que puis-je faire si je perds mon téléphone ?
+
+    Pour les utilisateurs qui avaient un /e/ ID enregistré sur le téléphone que vous avez perdu.
+
+Les étapes à suivre sont les suivantes :
+
+    Demandez la désactivation de votre compte en envoyant un courrier à support@e.email.
+    Pour la demande, utilisez votre /e/ mail ID ou l'email de récupération que vous avez utilisé lorsque vous avez créé le /e/ ID. Nous avons les deux emails dans notre base de données et nous serons en mesure de vous aider à désactiver votre ID.
+    Pour plus d'explications, vous demandez ici la désactivation d'un compte. Ne supprimez pas votre compte car cela désactiverait votre accès aux données de votre compte sur eCloud également.
+
+
+Quelques informations supplémentaires si vous avez perdu votre téléphone
+
+Comme vous le savez peut-être, eCloud est issu de NextCloud.
+
+NextCloud dispose de deux fonctionnalités qui permettent de faire face à de telles situations
+
+    Révoquer la session
+
+La fonction de révocation de la session se fait à partir du serveur. Vous pouvez la voir dans votre eCloud sous paramètres/utilisateur/sécurité >appareils et sessions.
+
+    Effacer le dispositif
+
+Cette implémentation n'a pas encore été ajoutée au système d'exploitation.
+
+L'administrateur eCloud peut-il accéder à mes données ?
+
+Sur n'importe quelle instance NextCloud, un administrateur peut voir vos fichiers et toutes les informations dans la base de données. Non seulement les administrateurs NextCloud, mais aussi les administrateurs du serveur (c'est-à-dire root) ont cet accès. La seule façon de rendre les fichiers inaccessibles est d'utiliser le cryptage de bout en bout.
+
+NextCloud n'a pas de plans pour le cryptage de la base de données selon notre compréhension. Nous prévoyons de fournir un service supplémentaire à l'avenir, peut-être basé sur EteSync. L'équipe doit étudier sa faisabilité et son UX (normalement cela signifierait perdre la possibilité d'accéder à ces informations depuis l'interface web).
+
+Nos administrateurs eCloud doivent faire des sauvegardes, effectuer des mises à jour, réinitialiser les mots de passe, etc. Nous avons mis en œuvre le cryptage côté serveur de Nextcloud sur nos serveurs. Nous prévoyons d'activer le plugin de cryptage de bout en bout (E2EE) dans la seconde moitié de l'année 2021.
+
+Cela vous permettra de stocker des fichiers sécurisés avec une clé que vous seul possédez, tout en laissant nos administrateurs eCloud faire le travail de maintenance de la plateforme.
+
+Vous pouvez également héberger votre propre eCloud ou un simple Nextcloud (sans serveur de messagerie dans ce cas).
+
+
+Je veux en savoir plus sur la sécurité d'eCloud
+
+Comme il s'agit d'une demande fréquente de la part des utilisateurs d'eCloud, nous aimerions clarifier quelques points :
+
+    ecloud.global est une version modifiée de ecloud-selfhosting, qui est basée sur plusieurs projets open source.
+    Nous avons implémenté le cryptage côté serveur de Nextcloud sur nos serveurs. Comme vous le savez peut-être, le SSE est une exigence pour E2EE.
+    Nous entretenons une relation de longue date avec un expert en sécurité chargé de renforcer et de surveiller nos systèmes, y compris ecloud.global.
+    Pour en savoir plus, consultez votre instance eCloud.
+
+Quelques-unes des améliorations appliquées à ecloud.global par rapport à l'instance ecloud-selfhosting de base :
+
+    Optimisation des performances adaptée à l'échelle du service (nombre d'utilisateurs, taille du stockage, etc.).
+    Haute disponibilité pour tous les services de base : nextcloud, mariadb et redis, derrière un équilibreur de charge HAProxy.
+    Nous nous efforçons de toujours maintenir l'infrastructure et les applications en conformité avec les meilleures directives disponibles en matière de renforcement de la sécurité, telles que DevSec Hardening Framework et CIS Benchmark for Ubuntu.
+    Nous appliquons les techniques de confinement des processus et les mesures d'atténuation fournies par AppArmor et systemd.
+    Nous utilisons la surveillance Wazuh pour la détection des menaces.
+
+Si vous pensez (ou pouvez prouver) qu'il existe une faille de sécurité dans ecloud.global ou le projet ecloud-selfhosting, veuillez nous contacter directement : security@e.email.
+
+Veuillez utiliser la clé suivante pour crypter toute divulgation sensible : https://keys.openpgp.org/vks/v1/by-fingerprint/F242DB4B0F002ED0AB73A5D06E25E121E5939DAF
+
+
+Peut-on configurer un nuage personnalisé pour se connecter à eCloud ?
+
+Vous pouvez configurer /e/OS pour parler à une autre instance de Nextcloud, bien que vous n'obtiendrez pas toutes les fonctionnalités comme le nom d'utilisateur commun pour tous les services, y compris la messagerie, etc. Vous pouvez également héberger vous-même eCloud sur vos propres serveurs si vous le souhaitez.
+
+
+Mises à jour à venir pour eCloud
+
+Outre la fonction d'effacement du dispositif, la fonction "Trouver mon téléphone" devrait être mise en œuvre au troisième trimestre de 2021.
+
+
+Où sont stockées les données eCloud ?
+
+Les serveurs eCloud sont situés en Finlande et fonctionnent avec de l'énergie renouvelable. Vous pouvez consulter de la documentation sur eCloud ici Nous ajouterons de la documentation technique à ce sujet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Problèmes rencontrés et Suggestions
+
+Si je trouve un bogue, dois-je vous envoyer un courriel ?
+
+Non - veuillez signaler les bogues et envoyer des suggestions comme expliqué ici. Ajoutez le plus de détails possible et un journal si possible. Cela permet à nos développeurs de déboguer plus facilement le problème. Veuillez noter que les développeurs désignés peuvent vous contacter via la section des commentaires de Gitlab s'ils ont besoin de plus d'informations de votre part.
+
+Veuillez éviter d'utiliser l'email ou la messagerie instantanée pour signaler des problèmes, ce n'est pas un processus efficace.
+
+
+J'ai des suggestions à faire. Comment dois-je vous contacter ?
+
+Vos suggestions et demandes de fonctionnalités sont les bienvenues. Vous pouvez créer un sujet ici. Sur le forum, d'autres utilisateurs peuvent examiner vos suggestions et donner leur avis. Si nous recevons un grand nombre de demandes d'utilisateurs, nous les partagerons avec notre équipe de développement qui évaluera si la suggestion est techniquement possible. En fonction de leurs contributions, nous pouvons envisager de l'inclure dans notre feuille de route de développement.
+
+Si vous avez des suggestions concernant l'amélioration de la confidentialité de notre système d'exploitation, vous pouvez envoyer un courriel à privacychallenge@e.email.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Service Après Vente
+
+
+Mon appareil n'est plus pris en charge par LineageOS. Est-ce que /e/ cessera également de le prendre en charge ?
+
+/e/ ne dépend pas de LineageOS pour décider des appareils à prendre en charge ou à cesser de prendre en charge. Nous avons déjà plusieurs appareils qui ne sont pas sur la liste des appareils supportés par LineageOS. Nous prévoyons de porter d'autres appareils pour qu'ils fonctionnent avec le code /e/.
+
+
+Si mon appareil n'est pas pris en charge par LineageOS, recevrai-je quand même les correctifs de sécurité à temps ?
+
+Oui. Nous téléchargerons et appliquerons les correctifs de sécurité pour les appareils s'ils sont disponibles au téléchargement depuis la source.
+
+
+La ROM /e/ supportera-t-elle les smartphones équipés d'un clavier ?
+
+Le portage sur n'importe quel appareil dépend de :
+
+   
+ Est-il possible de déverrouiller le bootloader ?
+    Avons-nous accès à un arbre de code source de référence pour construire Android sur celui-ci ?
+    de la bande passante du développeur (le portage d'un nouvel appareil avec toutes les fonctionnalités fonctionnelles prend entre 2 et 3 mois pour un développeur expert).
+
+
+Mon appareil a presque dix ans. Allez-vous continuer à le prendre en charge ?
+
+Nous devrons cesser de prendre en charge certaines anciennes versions d'Android, comme Nougat. La raison en est la suivante
+
+    Il est très difficile de prendre en charge plusieurs versions du système d'exploitation en même temps.
+    Les mises à jour de sécurité ne peuvent pas être rétro-portées pour toujours.
+
+Veuillez noter que l'expérience /e/ est similaire quelle que soit la version d'Android exécutée en arrière-plan. Vous pouvez consulter la liste des appareils pris en charge ici
+
+
+Pouvez-vous me recommander un téléphone ?
+
+La décision de choisir un téléphone doit être basée sur les critères suivants
+    Il est sur la liste des appareils supportés par /e/OS (si vous prévoyez de flasher /e/OS )
+    sa disponibilité dans votre région
+    La facilité d'accès aux centres de service matériel
+    Enfin, et surtout, s'il convient à votre budget.
+
+Est-ce que /e/ permet de verrouiller le bootloader sur les téléphones qui supportent le démarrage vérifié ?
+
+Pour le moment, nous verrouillons le bootloader uniquement sur les Fairphone 3/3+ préinstallés. Il est sur la feuille de route de développement pour obtenir cette fonctionnalité sur tous les appareils supportés par /e/OS.
+
+
+En tant que fork de LineageOS, utilisez-vous le dernier code source de LineageOS pour construire votre ROM ?
+
+Oui, avant chaque construction majeure, nous synchronisons d'abord les dernières branches de LOS. Ensuite, nous fusionnons avec nos branches.
+
+
+Est-ce que /e/OS permet le rootage ou est-ce que les applications qui nécessitent le rootage peuvent être utilisées ?
+
+Vous pouvez rooter /e/OS. Cela dit, ce n'est pas vraiment dans le cadre de nos projets. Comme mentionné dans ce fil de discussion, nous construisons /e/OS pour l'utilisateur moyen et non pour les geeks qui ont déjà beaucoup de choix ou savent comment modifier techniquement leurs smartphones.
+
+Pour les utilisateurs qui veulent rooter leur appareil, veuillez noter que /e/ ne nécessite pas de rootage. De même, /e/ ne permet pas le rootage des applications, à l'exception d'adb dans les options de développement. Les utilisateurs peuvent utiliser des outils tiers (comme Magisk) pour accéder à ces fonctionnalités, mais cela dépasse le cadre de ce guide.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Feuille de route /e/
+
+
+
+Avez-vous l'intention de travailler avec d'autres entreprises spécialisées dans la protection de la vie privée, comme Purism ou Pine ?
+
+Nous avons été en contact avec les deux équipes de projet.
+
+Nous étions intéressés par la création d'un Librem /e/ mais rien n'est sorti de nos discussions.
+
+Sur Pine, nous avons un post avec des détails sur la façon de porter /e/OS sur le PineBook.
+
+D'après nos tests de /e/OS sur le PinePhone, nous avons constaté que le matériel actuel était trop lent pour offrir une expérience utilisateur décente.
+
+
+Avez-vous l'intention de construire votre propre smartphone ?
+
+Nous pourrions travailler dans ce sens à l'avenir.
+
+Certains des points clés que nous voudrions prendre en compte dans notre propre smartphone sont les suivants
+
+    L'accent sur la valeur de la vie privée
+    Des interrupteurs physiques pour les composants matériels tels que l'appareil photo et le microphone.
+    Une bonne batterie qui peut être changée pour une meilleure durabilité
+    Un facteur de forme éventuellement plus petit
+
+Ce type d'entreprise nécessiterait un investissement important et des partenaires fiables.
+
+Pour l'instant, la création d'un téléphone /e/ n'est pas une priorité dans notre feuille de route. Nous nous concentrons sur l'amélioration de notre /e/OS pour nos utilisateurs.
+
+
+Prévoyez-vous à l'avenir d'élargir les appareils que vous proposez dans votre boutique eSolutions ?
+
+Nous avons actuellement trois gammes de produits :
+
+    /e/OS sur les appareils Fairphone 3/3+ tout neufs et vendus dans l'UE uniquement en raison de l'incompatibilité avec certains réseaux américains.
+    /e/OS sur les appareils GS290 (Gigaset) neufs et vendus dans l'UE uniquement en raison de l'incompatibilité avec certains réseaux américains.
+    /Nous avons deux nouveaux modèles en tête pour les États-Unis mais cela doit être confirmé. Vous pouvez vous inscrire à notre newsletter pour l'annonce !
+
+
+
+Le /e/OS est-il compatible avec les réseaux Asiapac en Australie ou Nouvelle-Zélande ?
+
+Vous pouvez vérifier avec notre partenaire en Australie
+
+
+Est-il possible de voir /e/OS sur les tablettes que vous fabriquez ?
+
+Il est possible d'installer /e/OS sur des tablettes. Vous pouvez vérifier certaines des constructions d'appareils ici.
+
+Malheureusement, la création de tablettes /e/ n'est pas dans nos projets à court terme.
+
+
+Est-il prévu de proposer un mode bureau comme Samsung Dex ?
+
+C'est quelque chose que nous avons en tête depuis le début de l'histoire de /e/. C'est aussi régulièrement demandé par certains utilisateurs et partenaires commerciaux potentiels.
+
+Le problème pour le moment est que nous avons des ressources assez limitées en termes de développement. Nous devons d'abord nous concentrer sur le projet de base. C'est quelque chose que nous avons à l'esprit et qui figure sur notre feuille de route.
+
+
+Allez-vous ajouter le support de l'encre électronique ?
+
+Nous aimerions prendre en charge les "appareils à expérience plus lente" avec l'encre électronique dès que l'équipe disposera d'une bande passante plus importante pour gérer ces tâches.
+
+
+L'assistant d'installation offrira-t-il différents niveaux de configuration pour l'utilisateur, comme par défaut, intermédiaire, expert .... ?
+
+Nous prévoyons d'offrir la possibilité de désinstaller les applications par défaut. Cela fait partie de notre feuille de route.
+
+
+D'autres modèles de téléphones seront-ils ajoutés à Easy Installer à l'avenir ?
+
+Le développement de l'installateur facile est un effort communautaire. Cela signifie que les utilisateurs ayant des compétences en matière de développement contribuent au code. L'ajout de nouveaux appareils dépend des efforts de la communauté. L'équipe de développement /e/ participe à la correction des bogues dans le code source de base de l'installateur facile.
+
+
+Seriez-vous intéressé par un rapprochement avec d'autres équipes de projet partageant les mêmes idées ?
+
+Oui, nous sommes toujours prêts à discuter. N'hésitez pas à entrer en contact avec eux et à nous communiquer les détails sur contact@e.email ID.
+
+
+
+Le projet /e/ lancera-t-il d'autres services web, tels que Spot ?
+
+Nous devons d'abord améliorer Spot (notre moteur de recherche par défaut, méta-moteur de recherche dérivé de Searx) car il est trop lent. Nous avons d'autres services et produits en tête. Vous pouvez vous inscrire à notre newsletter pour recevoir l'annonce de leur lancement !
+
+
+Allez-vous divulguer la méthode de calcul du score de confidentialité intégré dans /e/OS ?
+
+C'est dans la feuille de route des prochaines versions.
+
+
+Est-ce que /e/ a le support ASHA pour les appareils auditifs ?
+
+Pas encore malheureusement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dé-googlisation
+
+
+
+Quel est l'état actuel de la dé-googlisation sur /e/ ?
+
+Pour une réponse détaillée, veuillez consulter la seconde partie de ce document : « Etat de la dé-googlisation ».
+
+
+Est-ce que /e/OS vérifie l'absence de code "indésirable" avant le chargement ?
+
+Veuillez noter que nous ne vérifions pas la présence de code indésirable avant le chargement de /e/OS sur les appareils que nous supportons.
+
+La raison en est très simple. L'objectif principal de /e/ est de dégoogler et d'améliorer la vie privée liée à la collecte industrielle de données personnelles par les grandes entreprises technologiques.
+
+Pour approfondir ce point, /e/OS n'est pas destiné aux utilisateurs ayant des besoins de sécurité importants.
+
+Nous entendons par là les personnes qui peuvent être ciblées par des organisations telles que les gouvernements, les agences de renseignement, les organisations criminelles, etc. Nous pensons que ces personnes ne devraient pas utiliser /e/OS en s'attendant à ce qu'il les protège de ce niveau de surveillance supplémentaire. Nous pensons que ces personnes ne devraient pas utiliser /e/OS en espérant qu'il les protégera de ce niveau de surveillance supplémentaire. Il existe d'autres systèmes d'exploitation alternatifs qui se concentrent sur ces aspects et peuvent être mieux adaptés à ces utilisateurs.
+
+Le problème de sécurité le plus sérieux dans la "vraie vie" pour les utilisateurs réguliers de /e/ serait un scénario où l'appareil serait volé ou perdu.
+
+C'est pourquoi nous encourageons nos utilisateurs à mettre en œuvre le mode de cryptage sur leur appareil.
+
+Nous réfléchissons à l'introduction d'un moyen par lequel les utilisateurs de /e/OS peuvent effectuer en toute sécurité un nettoyage complet de leur appareil à partir de leur compte utilisateur sur ecloud.global.
+
+Chez /e/, nous sommes toujours intéressés par l'amélioration du produit. Dans le même temps, nous devons également concentrer nos efforts étant donné la petite taille de notre équipe de développement.
+
+Nous accueillons les contributeurs de la communauté qui peuvent nous aider à améliorer les aspects de sécurité du /e/OS.
+
+Si vous pensez pouvoir nous aider, envoyez-nous vos coordonnées à l'adresse contact@e.email.
+
+
+Comment Google collecte-t-il mes données ? Le système LineageOS de base a-t-il supprimé tous les composants de collecte de données télémétriques fermés ou utilisés par les utilisateurs ?
+
+Une étude récente menée par le professeur Doug Leith du Trinity College de Dublin ainsi que par les docteurs Paul Patras et Haoyu Liu de l'université d'Édimbourg a examiné les données envoyées par six variantes du système d'exploitation Android développées par Samsung, Xiaomi, Huawei, Realme, LineageOS et /e/OS. Parmi les conclusions de cette étude, on trouve cette déclaration pertinente... "À l'exception d'e/OS, tous les fabricants de combinés examinés collectent une liste de toutes les apps installées sur un combiné. Il s'agit d'une information potentiellement sensible puisqu'elle peut révéler les intérêts des utilisateurs..."
+
+Le rapport complet peut être consulté ici
+
+D'autres rapports qui traitent de ce sujet sont liés ici
+
+    Rapport du Trinity College
+    Étude Vanderbilt
+
+
+Quelle est la différence entre /e/ et MicroG ou LOS ?
+
+Comme vous le savez peut-être, MicroG et LOS fournissent également aux distributions une émulation locale de l'API de service obtenue par triangulation de la force du réseau.
+
+Pour comprendre en quoi /e/ est différent, veuillez lire ces documents :
+
+    Qu'est-ce que /e/
+    État actuel de la dégooglisation
+
+
+Un téléphone Apple est-il une option sûre pour une personne soucieuse de sa vie privée ?
+
+    L'iPhone utilise Google comme moteur de recherche. L'idéal serait d'abandonner la recherche Google pour un moteur de recherche plus respectueux de la vie privée - un métamoteur de recherche comme Qwant ou DuckDuckGo. En raison de cette dépendance à l'égard de la recherche Google, leurs téléphones communiquent beaucoup de données personnelles. 6 Mo par jour pour être précis.
+
+    Cet accord entre Apple et Google représente 12 milliards de dollars par an. Cela ne joue pas en sa faveur
+
+    Enfin, Apple prétend agir en faveur de la vie privée. C'est la vie privée revendiquée. /e/ soutient la vie privée vérifiable.
+
+
+/e/ - état de la déGooglisation
+- https://e.foundation
+
+v 1.0 - 28 mars 2020 - première version
+V1. 1 - 9 septembre 2020 - problème de vérification de la connectivité corrigé URL
+
+
+
+RÉSUMÉ
+
+/e/ est une solution d'écosystème mobile composée de:
+-/e/OS : un système d'exploitation mobile, construit à partir d'un soft-fork d'AOSP/LineageOS, qui fonctionne sur plus de 90 appareils
+-variété de services en ligne exploités sous l'égide de "Ecloud", avec des liens étroits avec le système d'exploitation mobile, construit à partir de divers services Web, notamment NextCloud, OnlyOffice, Postfix, Dovecot et d'autres. 
+
+Le but de /e/ est de proposer un écosystème mobile alternatif qui offre plus de confidentialité aux données de l'utilisateur, et plus particulièrement qui est entièrement dégooglé.
+
+Dans une ROM AOSP standard et dans la plupart des builds AOSP personnalisés, on trouve de nombreuses dépendances aux services de Google. Elles envoient certaines données aux serveurs de Google dès que l'utilisateur allume son smartphone. 
+
+Dans ce qui suit, nous décrivons comment nous rendons le système d'exploitation mobile /e/ aussi libre que possible de la collecte de données de Google.
+
+
+
+1- Niveau de base
+
+Contrôle de connectivité
+
+Dans Android, un contrôle de connectivité est effectué pour vérifier qu'Internet peut être atteint sur les réseaux disponibles. La requête attend un code d'erreur HTTP 204 en retour et est effectuée par rapport aux FQDN de Google :
+android_frameworks_base▸services▸core▸java▸com▸android▸server▸connectivity▸NetworkMonitor.javaprivate static final String DEFAULT_HTTPS_URL = "https://www.google. com/generate_204";private static final String DEFAULT_HTTP_URL = "http://connectivitycheck.gstatic.com/generate_204";private static final StringDEFAULT_FALLBACK_URL = "http://www.google.com/gen_204";private static final StringDEFAULT_OTHER_FALLBACK_URLS = "http://play. googleapis.com/generate_204";
+
+Cela signifie que Google peut enregistrer un ping à partir de n'importe quel appareil Android chaque fois que son interface réseau s'arrête, ce qui est une situation courante après le démarrage.
+
+Solution : nous avons remplacé les adresses des serveurs Google dans les sources AOSP par nos propres serveurs qui n'enregistrent pas les vérifications de connectivité, pour les appels par défaut, et une solution de repli vers un serveur Google.
+DEFAULT_HTTPS_URL:https://e. foundation/net_204
+DEFAULT_HTTP_URL:https://204.ecloud.global
+DEFAULT_FALLBACK_URL : default Google URL
+Merged to the following branches:-Nougat-Oreo-Pie
+
+C'est une situation temporaire, pas idéale, car cette solution repose sur la confiance que les utilisateurs peuvent avoir dans notre projet et notre infrastructure. 
+Cela devra être amélioré en utilisant des pings vers des serveurs FQDN choisis au hasard dans une longue liste de serveurs fiables, en utilisant quelque chose de différent que la vérification du code d'erreur 204 HTTP. 
+
+Références:
+-issue 268 sur le bugtracker de /e/ https://gitlab.e.foundation/e/backlog/-/issues/268
+
+
+
+NTP serveurs
+Dans Android, Google a défini ses propres serveurs pour fournir le service Internet de synchronisation du Time Network Protocol : time.android.com
+
+Looking at AOSP source code:
+android_frameworks_base/core/res/res/values/config.xml<string translatable="false" name="config_ntpServer">time.android.com</string>
+
+Cela signifie que Google peut enregistrer les requêtes NTP de tous les appareils Android qui sont connectés à Internet.
+
+Solution : nous avons remplacé les FQDNs de Google par le FQDN habituel et standard pour le service NTP sur Internet : pool.ntp.org
+
+Mergé dans les branches suivantes:
+-Nougat-Oreo-PieRéférences:
+-issue 272 sur le bugtracker de /e/ : https://gitlab. e.foundation/e/backlog/-/issues/272
+
+
+
+Serveurs DNS
+Détaillé ici pour mémoire : ce n'est pas strictement lié à la "déGooglisation", mais il a été beaucoup discuté, et a des préoccupations importantes en matière de vie privée.
+
+Dans Android, le choix des serveurs DNS est automatique : 
+Par conséquent, dans /e/ nous avons mis en œuvre une fonctionnalité disponible dans les paramètres, de sorte que l'utilisateur peut facilement modifier l'adresse IP de leur DNS de choix, avec 9.9.9.9 suggéré par défaut, et de le mémoriser comme un paramètre par défaut.
+
+Notez que notre navigateur par défaut est un fork de Chromium, qui par défaut n'utilise pas la fonctionnalité GoogleDNS sur HTTP, qui contournerait le système de paramètres DNS pour la navigation Web. 
+
+Références:
+issue 269 on /e/'s bugtracker : https://gitlab.e.foundation/e/backlog/-/issues/269
+
+
+IPv4/IPv6 availability check
+
+En examinant le code source de libc (Bionic) de l'AOSP, nous avons remarqué inbionic/libc/dns/net/getaddrinfo. c que la disponibilité de la connectivité IPv4 vs IPv6 réalisée à l'aide des fonctions _have_ipv4() et _have_ipv6() a été vérifiée par rapport à Googleserver aux adresses 8.8.8.8 et 2000: : respectivement.
+
+Ce problème doit encore être résolu dans /e/OS.
+Références :
+Code source Android à l'adresse https://android.googlesource.com/platform/bionic/
+
+
+
+
+2- Niveau intermédiaire :
+
+Google Play Services
+
+/e/ OS ne repose pas sur les services Google Play. Au lieu de cela, nous utilisons le framework open source microG qui fournit une API similaire à celle de Google Play Services aux applications Android, 
+notamment pour :
+- les notifications qui passent par le service Google Cloud Messaging
+- la géolocalisation en utilisant les tours cellulaires et les réseaux wifi.
+Nous utilisons le Mozilla Locationservice (tours cellulaires uniquement) comme base de données.
+
+Nous avons également Mapbox comme fournisseur de tuiles de cartes par défaut, en remplacement de Google Maps.
+Cela garantit que les utilisateurs sont cachés de Google, et n'ont pas à utiliser un compte Google personnel pour utiliser ces services.
+
+
+Services de synchronisation
+
+/e/ OS ne dépend pas non plus des services de synchronisation de Google ou des comptes Google pour les données comme les documents, les images, les vidéos, etc. 
+En remplacement, nous avons développé un service de synchronisation appelé "eDrive", qui peut synchroniser les données depuis et vers le nuage /e/, qui est une agrégation de plusieurs services, y compris NextCloud, OnlyOffice, postfix.
+
+D'autres données synchronisées vers le nuage /e/, tels que Notes, Tâches, Calendrier, Contacts, n'utilisent pas de services Google.
+
+Plusieurs autres services de synchronisation, qui ne dépendront pas des services Google sont également en cours de développement : 
+-Synchronisation SMS vers le nuage /e/
+- géo-localisation vers le nuage /e/.
+
+
+
+
+3- Haut niveau
+
+Choix d'applications
+/e/ a sélectionné un ensemble différent d'applications par défaut que ce que l'on peut trouver sur AOSP ou la plupart des ROMs personnalisées basées sur AOSP.
+
+Nous voulons nous assurer que les applications ne dépendent pas des services Google, y compris les GoogleAPI.
+Exemples:
+-pour le courrier, nous utilisons une version modifiée de K9-mail. Nous avons amélioré l'interface utilisateur et l'avons rendue compatible avec le gestionnaire de compte /e/.
+-l'application de messages (SMS) par défaut est une version modifiée de QKSMS
+-l'application appareil photo par défaut est OpenCamera-l'application notes par défaut est NextCloud notes
+mite. Il comprend de nombreux correctifs pour, entre autres:
+	-empêcher l'envoi de données à Google (comme l'historique de navigation)
+	-mettre en place un choix différent de moteurs de recherche par défaut : spot.ecloud.global, qui est un moteur de recherche que nous exploitons, est le moteur par défaut, suivi de Qwant,DuckDuckGo et Cliqz.
+-l'application Maps par défaut est Magic Earth
+
+
+App store
+/e/ n'utilise pas Google App Store. 
+Au lieu de cela, nous avons développé un nouvel installateur d'applications Android appelé "Apps", qui s'appuie sur une API tierce indépendante qui sert la plupart des applications Android gratuites, y compris les applications open source qui peuvent être trouvées sur F-DROID.
+Cet installateur d'applications ne nécessite ni un compte Google, ni aucun autre compte pour fonctionner.
+
+
+Services en ligne.
+Comme déjà mentionné ci-dessus, /e/ utilise des services en ligne par défaut pour:
+-la recherche Web-la messagerie électronique
+-le stockage en nuage
+-calendrier
+-bureau
+-contacts
+-tâches
+-notes
+
+Tous ces services sont basés sur divers composants open source, sans aucune dépendance vis-à-vis de Google. Ces composants ont été intégrés pour la plupart à https://ecloud.global pour travailler en utilisant une seule identité /e/ sous la forme username@e.email. La configuration est également disponible pour l'auto-hébergement.
+
+Les services en ligne /e/ utilisent actuellement :
+- une dérivation de Searx, le métamoteur de recherche exploité à l'adresse https://spot.ecloud.global
+-Nextcloud
+-Postfix
+-Dovecot
+-OnlyOffice.		
+Micro-g
+
+Statut du développement de microG
+
+Le développement de microG est en cours. Nous discutons régulièrement avec son mainteneur et soutenons également le projet microG financièrement.
+
+Des améliorations et des mises à jour sont en cours. Récemment, le support FCM a été ajouté et amélioré.
+
+L'API de suivi des contacts a également été ajoutée (elle n'est cependant pas activée par défaut sur /e/OS).
+
+D'autres mises à jour sont en préparation.
+
+Le projet est très complexe et bénéficierait grandement si plus d'utilisateurs y contribuaient.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Versions exécutables
+
+
+Pourquoi le mode débogage est-il activé sur /e/OS ?
+
+UserDebug est un héritage de LineageOS à partir duquel nous avons bifurqué notre code source. Il est également nécessaire sur de nombreux appareils plus anciens pour démarrer et fonctionner correctement.
+
+Du point de vue de la sécurité, il peut être plus sûr d'avoir le mode utilisateur plutôt que le mode débogage, bien qu'un attaquant puisse également décompiler un APK pour comprendre comment il fonctionne. L'avantage réel n'est donc peut-être pas si important.
+
+Cependant, nous prévoyons d'activer le mode utilisateur pour les appareils plus récents dans les versions stables.
+
+
+Je suis intéressé par l’élaboration et la maintenance de la ROM pour mon appareil. Comment puis-je aider ?
+
+Merci de proposer votre aide pour les versions exécutables. Vous pouvez vous référer au document ici pour plus de détails.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tablettes compatibles 
+avec des versions officielles de eOS
+
+
+
+
+
+
+
+
+
+
+
+
+Toutes les tablettes compatibles avec eOS (y compris les versions non officielles)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Guide d’utilisation 
+de  Maps
+(Magic Earth)
+
+
+
+Notes de versions
+# Version actuelle de Magic Earth :
+# 
+# - Android : 7.1.21.43.84F28B90.826C5DB9 (Date de sortie : 26 octobre 2021)
+# - iOS : 7.1.21.43.0CFA72CE.826C5DB9 (Date de sortie : 25 octobre 2021)
+# 
+# Version actuelle de la carte : 7.415 (Date de publication : 4 novembre 2021)
+# 
+# 
+# 
+Compatibilité et configuration requise pour Magic Earth
+# iOS
+# Nécessite iOS 13.0 et watchOS 5.0 ou une version ultérieure. Compatible avec iPhone, iPad et iPod touch.
+
+# Android
+# Compatible avec Android 4.1 (Jelly Bean) ou supérieur.
+# 
+# 
+# 
+# 
+
+
+
+
+
+
+
+
+
+Démarrage
+
+
+
+Télécharger des cartes dans Magic Earth
+
+# Android
+# 1. Ouvrez Magic Earth et appuyez sur Télécharger des cartes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Parcourez la liste et appuyez sur le pays ou la région que vous souhaitez enregistrer sur le téléphone.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Attendez que la barre de progression se remplisse et que l'icône s'affiche.
+
+# 
+# 
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Appuyez sur l'icône du téléphone dans le coin inférieur droit de l'écran pour voir les cartes téléchargées.
+
+# 
+# 
+# 
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Utiliser Magic Earth en mode hors connexion
+# Vous pouvez utiliser Magic Earth sans connexion Internet. Voici ce que vous devez faire :
+# 
+# 1. Téléchargez les cartes nécessaires (tous les pays et régions que vous allez traverser) sur votre téléphone. Wi-Fi recommandé.
+# 
+# 2. Sur l'écran principal de l'application, appuyez sur le menu Afficher > Styles de carte > Standard. Satellite et Terrain nécessitent l'utilisation d'Internet, ils doivent donc être désactivés.
+
+
+# 
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 3. Vous pouvez maintenant commencer à naviguer en utilisant les cartes stockées sur votre téléphone.
+# 
+# IMPORTANT : Traffic, Weather, Wikipedia nécessitent également Internet, mais la consommation de données mobiles est faible. Si vous ne souhaitez pas utiliser ces services en ligne, veuillez les désactiver dans le menu Afficher > Couches de carte.
+# 
+# Vous pouvez également désactiver complètement l'Internet (Wi-Fi et données mobiles) sur votre téléphone. Si les cartes nécessaires sont stockées sur votre téléphone, elles seront utilisées par notre application pour la planification de l'itinéraire et la navigation. Vous pouvez donc oublier les coûts de l'Internet mobile !
+# 
+Télécharger les voix humaines dans Magic Earth
+# Les voix humaines peuvent être téléchargées dans les paramètres sonores de l'application. Voici comment cela fonctionne :
+# 1. Démarrez Magic Earth.
+
+
+
+
+
+
+
+
+
+
+2. Dans la vue cartographique, appuyez sur Paramètres > Général > Son > Langue vocale.
+
+# 3. Parcourez la liste et tapez sur la voix souhaitée pour la télécharger.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Lorsque le téléchargement est terminé, une icône de téléphone s'affiche à côté de la voix. Tapez sur la voix téléchargée pour la sélectionner.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 5. De retour dans l'écran des paramètres sonores, le nom de la voix utilisée s'affiche à côté de l'option " Langue de la voix ".
+
+
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+Vous recevrez maintenant des instructions de navigation dans la langue et la voix que vous avez sélectionnées.
+# 
+# 
+# 
+
+
+
+
+
+
+Vitesse actuelle et heure d'arrivée prévue (ETA) dans Magic Earth
+
+# Pendant la navigation, des informations clés sont affichées sur la carte, dans la barre inférieure et dans une barre flottante sous le panneau de navigation.
+# Les informations de navigation sont réparties entre les 2 zones comme suit :
+
+# Barre inférieure
+# 
+# Heure d'arrivée estimée
+# Temps restant jusqu'à la destination
+# Distance restante jusqu'à la destination
+
+
+# Barre flottante
+# (sous le panneau de navigation en mode portrait, ou dans la partie supérieure droite de l'écran en mode paysage)
+# Limite de vitesse
+# Vitesse actuelle
+# Niveau de la batterie
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Touchez la barre flottante pour masquer ou réafficher le niveau de la batterie. Ce paramètre est persistant, de sorte que la sélection effectuée au cours d'une session de navigation sera également mémorisée pour les trajets suivants.
+
+Utilisation de Carplay
+# Apple CarPlay est une façon plus intelligente et plus sûre d'utiliser Magic Earth en voiture - vous permettant de rester concentré sur la route. Vous pouvez obtenir des indications virage par virage, voir la carte, écouter de la musique, et bien plus encore. Directement sur l'écran du système d'infodivertissement de votre voiture.
+
+
+# 
+# Pour pouvoir utiliser Carplay, veuillez vous assurer que Siri est activé.
+# Depuis l'écran d'accueil, naviguez : Paramètres > Siri et recherche .
+# Appuyez pour activer.
+# 
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+Paramétrage
+
+
+Automatique, affichage de la carte en 2D et 3D
+
+# MODE DE CONDUITE
+# 
+# Définissez l'affichage de la carte souhaité lorsque vous conduisez (avec ou sans itinéraire planifié). Allez dans Réglages > Navigation > Carte 2D/3D et choisissez parmi :
+# 
+# - Automatique : la carte passe de la 2D à la 3D lorsque vous roulez en ligne droite à une vitesse plus élevée et qu'aucun virage n'est prévu, et de la 3D à la 2D lorsque vous approchez d'une intersection ou d'un virage. L'application effectue également un zoom arrière lorsque vous roulez à grande vitesse et un zoom avant lorsque vous ralentissez.
+# 2D : la carte reste en 2D
+# 3D : la carte reste en 3D
+# 
+# Lorsque l'option Automatique est sélectionnée, vous pouvez ajuster manuellement la carte : faites glisser deux doigts de haut en bas de l'écran pour passer en 2D, et de bas en haut pour passer en 3D. Pour revenir à l'affichage automatique :
+# - touchez l'icône Cible dans le coin supérieur droit de la carte.
+# OU
+# Sélectionnez Automatique dans Paramètres > Navigation > Carte 2D/3D.
+
+
+# 
+# NAVIGATION SUR LA CARTE
+# 
+# Lorsque vous démarrez Magic Earth, l'affichage de la carte est exactement le même que lorsque vous avez fermé l'application. Faites glisser avec deux doigts de haut en bas de l'écran pour passer en 2D, et de bas en haut pour passer en 3D. La prochaine fois que vous démarrez Magic Earth, l'affichage de la carte sera tel que vous l'avez défini.
+# 
+# 
+# 
+# 
+# 
+
+
+
+
+
+
+
+
+Les étiquettes de carte dans la langue locale
+# Avec Magic Earth, vous pouvez voir les étiquettes de carte dans la langue locale lorsque les données cartographiques contiennent les noms locaux de ce pays ou de cette région.
+# Pour activer cette option, il suffit de lancer l'application et d'appuyer sur Paramètres > Général > Étiquettes de carte > Dans la langue locale. Lorsque vous parcourez les cartes de différents pays, les noms des régions, des lieux, des rues s'affichent dans la langue locale de ce pays ou de cette région.
+# 
+# 
+# 
+# 
+Mode de voyage le plus rapide / le plus court sur Magic Earth
+# Dans Magic Earth, vous pouvez choisir entre le mode de voyage le plus rapide et le plus court. Pour choisir l'un de ces deux modes, il vous suffit de lancer l'application, d'appuyer sur Paramètres > Navigation > Voiture > Mode Voyage et de sélectionner l'option souhaitée.
+# Le réglage est persistant. Cela signifie que votre sélection actuelle sera également mémorisée pour vos prochains voyages. Sauf si vous le modifiez manuellement.
+# 
+# 
+# 
+# 
+Eviter les autoroutes, les péages, les ferries ou les routes non goudronnées avec Magic Earth
+# Avec Magic Earth, vous pouvez éviter les autoroutes, les péages, les ferries et les routes non goudronnées. Pour ce faire, il suffit d'appuyer sur Paramètres > Navigation > Voiture et d'activer l'une des options souhaitées.
+# Ces options sont persistantes. Cela signifie que votre sélection actuelle sera également mémorisée pour vos prochains voyages. Sauf si vous la modifiez manuellement.
+# 
+# 
+# 
+# 
+Format de l'heure dans Magic Earth
+# Magic Earth utilise le même format d'heure que votre téléphone. Si la sélection des paramètres de votre téléphone n'est pas reflétée dans Magic Earth, voici ce que vous devez faire :
+
+Sur iOS : Activez l'heure de 24 heures dans les Paramètres > Général > Date et heure de votre téléphone et vérifiez à nouveau dans Magic Earth.
+
+Sur Android : Choisissez entre "Utiliser le format 24 heures" et "Utiliser le format 12 heures" dans les Paramètres > Système > Date et heure de votre téléphone.
+
+Parfois, le changement ne s'affiche pas immédiatement dans Magic Earth, alors essayez l'une des méthodes ci-dessous et vérifiez à nouveau dans Magic Earth :
+# Désactivez l'option "Utiliser le format 24 heures" dans les paramètres de votre téléphone.
+# Passez au format 12 heures, puis revenez au format 24 heures.
+# 
+# 
+# 
+Pannes, Problèmes...
+# 
+Données cartographiques manquantes ou incorrectes dans Magic Earth_}
+
+Magic Earth utilise OpenStreetMap, qui est une source de données gratuite créée par des contributeurs du monde entier. Vous pouvez apporter votre contribution à l'exactitude et à l'exhaustivité de ces cartes. Si vous remarquez des données manquantes ou incorrectes, veuillez modifier les cartes directement sur la page web OpenStreetMap et vos modifications seront incluses dans nos prochaines mises à jour de cartes. Vous pouvez modifier la carte OpenStreetMap à l'adresse www.openstreetmap.org.
+# 
+# Voici une documentation utile sur la façon d'éditer sur OpenStreetMap : https://learnosm.org/en/.
+# 
+# # Merci d'apporter votre contribution à la construction d'un meilleur OpenStreetMap.
+# 
+# 
+# 
+# 
+# 
+Faible volume sonore dans Magic Earth
+# Pour profiter d'un guidage vocal de navigation fort et clair avec Magic Earth, veuillez vérifier les paramètres de volume sonore suivants :
+
+# 1. Le volume sonore du téléphone
+# L'application utilise le flux multimédia.
+# Sur Android, allez dans les Paramètres du téléphone > Sons > Volume > Media et réglez le volume au maximum. 
+# Sur iOS, réglez le volume sonore au maximum à l'aide des boutons matériels de volume sur le côté du téléphone.
+
+# 2. Le volume sonore de Magic Earth
+# Lancez l'application, appuyez sur Paramètres > Général > Son et réglez le volume souhaité pour la voix et les avertissements.
+
+Le volume sonore peut également être réglé pendant la navigation. Il suffit de faire glisser la barre inférieure vers le haut, puis d'appuyer sur Son pour régler le volume des instructions de navigation audio (voix) et des avertissements.
+
+Certaines voix humaines préenregistrées sont plus silencieuses que d'autres. Dans Réglages > Général > Son > Langue de la voix, vous pouvez choisir une autre voix humaine ou une voix Text-To-Speech.
+# Si la synthèse vocale est déjà sélectionnée et que le volume sonore est encore trop faible, dans les Paramètres du téléphone > Synthèse vocale, sélectionnez l'option Amplifier le volume de la parole. Ce paramètre rend le texte parlé plus fort que la normale.
+
+
+
+
+Impossible d'utiliser Magic Earth avec des données mobiles
+
+Si vous avez des problèmes de connexion dans Magic Earth, une série d'étapes de dépannage vous aidera à déterminer où se trouve la panne et comment résoudre le problème.
+# 
+# Parfois, les opérateurs peuvent appliquer des restrictions et bloquer l'accès à certains sites. Dans ce cas, soit une action est nécessaire sur votre appareil, soit vous devez contacter votre fournisseur de réseau.
+# 
+# La meilleure façon de commencer est de vérifier si la connexion Internet fonctionne correctement. Pour ce faire, il suffit d'accéder au lien suivant depuis votre appareil : https://m71os.services.magicearthsdk.com/connectivity_check.
+# 
+# Si le message 'It works.' s'affiche, cela signifie que votre connexion Internet fonctionne bien et que vous devriez pouvoir vous connecter à partir de l'application Magic Earth.
+# Si le message 'It works.' s'affiche mais que vous ne pouvez toujours pas utiliser Magic Earth avec des données mobiles, veuillez nous contacter à l'adresse support@magicearth.com.
+# Si le message "It works." ne s'affiche pas et qu'une action est nécessaire, veuillez contacter votre fournisseur de réseau pour plus d'informations.
+# Si le message "Ça marche." ne s'affiche pas et que vous recevez une erreur (par exemple, "time out", "no response"), veuillez accéder au lien suivant : http://m71os.services.magicearthsdk.com/connectivity_check.
+# Notre équipe se tient à votre disposition pour tout renseignement complémentaire sur ce sujet, n'hésitez pas à nous contacter. 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Conseils et Astuces
+
+
+
+Jouer une démo de votre itinéraire dans Magic Earth
+
+Apprenez à faire une simulation de votre itinéraire avant de partir en voyage.
+
+# \*Ces étapes peuvent être suivies sur les smartphones iPhone et Android.
+
+# 1. Dans la vue cartographique, appuyez sur .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Appuyez sur Ma position et modifiez le point de départ. Pour cela, effectuez l'une des opérations suivantes :
+# - tapez le point de votre départ et choisissez-le dans les résultats de la recherche ou.
+# - utilisez l'une des options de recherche disponibles dans la liste (Historique, Domicile, Travail... etc.)
+# \* Vous ne pourrez pas lire une démo de votre itinéraire si le point de départ est défini sur Ma position.
+
+
+
+# 
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Définissez le point de destination, puis appuyez sur Itinéraire. Attendez que Magic Earth marque votre itinéraire sur la carte.
+
+
+# 
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Appuyez sur Démonstration.
+# 
+# 
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. Pour terminer la démonstration, touchez l'écran puis touchez Fin.
+
+
+# 
+# 
+# 
+# 
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+Stocker les cartes de Magic Earth sur la carte SD_}
+
+# Android uniquement
+# Si vous utilisez une carte SD avec votre téléphone, les cartes sont téléchargées par défaut sur la carte SD (stockage externe). Vous pouvez le vérifier dans 'Paramètres > Général > Stockage des cartes > Préférer le stockage externe'. Tant que l'option "Préférer le stockage externe" est activée dans Magic Earth et que l'espace disponible sur la carte SD est suffisant, les cartes sont téléchargées sur le stockage externe du téléphone. Lorsque la carte SD est pleine, les cartes seront téléchargées sur le stockage interne du téléphone.
+
+# Vous pouvez également déplacer manuellement les cartes d'un stockage à un autre. Les dossiers de cartes Magic Earth se trouvent comme suit :
+# - INTERNE: internal_storage/android/data/com.generalmagic.magicearth/files/Download/MAGICEARTH/Data/Maps
+# - EXTERNE :
+# Android 4.4 et supérieur : storage/sdcard/Android/data/com.generalmagic.magicearth/files/Download/MAGICEARTH/Data/Maps
+# Android inférieur à 4.4 : external_storage/MAGICEARTH/Data/Maps
+# Assurez-vous que Magic Earth est fermé et déplacez les cartes d'un stockage à l'autre selon vos préférences. 
+Ensuite, redémarrez l'application et vérifiez si vos cartes sont disponibles dans la section "Cartes téléchargées" (balayez de droite à gauche dans l'écran "Télécharger des cartes".
+# 
+# 
+# 
+# 
+# 
+Voir les cartes 3D hors ligne dans Magic Earth
+
+# L'élévation (également appelée cartes 3D et Terrain) n'est pas incluse dans nos cartes hors ligne. Cependant, nous avons le plaisir de vous proposer une solution de contournement pour profiter des cartes 3D / de l'élévation dans Magic Earth lorsque vous naviguez sans Internet :
+# 
+# 1. Connectez-vous au Wi-Fi à la maison.
+# 2. Téléchargez les cartes des pays/régions qui vous intéressent.
+# 3. Sélectionnez Terrain dans le menu Afficher > Styles de carte.
+# 4. Parcourez la carte de la région que vous prévoyez de traverser OU jouez une démo de votre ou vos prochains itinéraires. Cela téléchargera les tuiles de la carte 3D de cette région sur votre téléphone.
+# 5. Désactivez l'Internet (Wi-Fi et données mobiles) sur votre téléphone et vous pourrez profiter des vues de carte en 3D lorsque vous êtes sur la route, en naviguant sans Internet.
+# 
+
+
+
+
+
+
+Importer les points d'intérêt de Magic Earth
+
+# # Android
+# Magic Earth accepte l'importation de fichiers .kml et .kmz. Pour importer votre propre liste de points d'intérêt :
+# 1. Tapez sur le fichier .kml ou .kmz (vous pouvez l'ouvrir depuis votre messagerie ou le copier dans vos documents sur le téléphone) et une liste de toutes les applications de navigation s'affichera. Si Magic Earth n'est pas automatiquement sélectionné, veuillez le faire dans la liste.
+\* Sur certaines versions d'Android, il se peut que la liste des applications de navigation ne s'affiche pas. Dans ce cas, apprenez comment importer manuellement des fichiers .kml.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. À ce stade, Magic Earth démarre et le message suivant s'affiche : 'Importer le fichier "nom.kml" ? Oui/Non". Tapez sur Oui.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Les points d'intérêt importés sont affichés comme une nouvelle catégorie à la fin de la liste dans le menu Recherche > Points d'intérêt.
+
+
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vous pouvez également utiliser votre propre icône pour les points d'intérêt (POI) que vous importez dans Magic Earth sur Android.
+# 
+# # Pour ce faire, allez dans le même dossier et ajoutez un fichier .png (c'est la seule extension acceptée) avec le même nom que le fichier .kml/.kmz.
+# 
+# # Si vous souhaitez importer d'autres POI ultérieurement, vous pouvez ajouter un nouveau fichier KML, utiliser le même nom que précédemment pour le fichier .kml/.kmz et les nouveaux POI seront ajoutés aux précédents.
+
+
+Supprimer les points d'intérêt importés sur Magic Earth
+Voici comment vous pouvez supprimer les points d'intérêt importés dans Magic Earth :
+
+# Android
+# 1. Sur l'écran principal de l'application, tapez sur la barre de recherche, faites défiler la liste et tapez sur Points d'intérêt. Les catégories de points d'intérêt importés s'affichent à la fin de la liste des points d'intérêt.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 
+
+
+
+
+
+
+2. Appuyez longuement sur la catégorie de POI importée souhaitée jusqu'à ce qu'un bouton avec l'option "Supprimer" apparaisse. Appuyez sur Supprimer pour supprimer la catégorie de PI de la liste et du téléphone.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ajouter un favori dans Magic Earth_}
+# Voici comment vous pouvez ajouter des favoris dans Magic Earth :
+# 1. Parcourez la carte et appuyez longuement sur l'emplacement souhaité. Ou faites une recherche et sélectionnez le résultat souhaité pour le voir sur la carte.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.  Faites glisser l'onglet du bas vers le haut.
+
+# 
+# 
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Appuyez sur l'icône étoile pour afficher et modifier les détails de l'emplacement, puis appuyez sur Enregistrer.
+# 
+# 
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 4. L'emplacement enregistré comme favori est marqué d'une étoile jaune. Pour retrouver vos favoris, touchez Recherche > Favoris.
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Editer ou supprimer un favori dans Magic Earth
+
+# Android
+# 1. Tapez sur la barre de recherche > Favoris.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Tapez longuement sur le favori souhaité. Appuyez sur Modifier pour modifier les informations, Supprimer pour supprimer le favori enregistré ou Déplacer pour placer le favori dans un dossier.
+
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Comment sauvegarder vos favoris, votre historique et vos alertes
+# Si vous envisagez de réinitialiser votre téléphone aux paramètres d'usine ou de réinstaller Magic Earth, nous vous recommandons de sauvegarder d'abord vos données Magic Earth.
+# 
+# Voici comment vous pouvez sauvegarder vos favoris, votre historique et vos alertes pour une utilisation ultérieure :
+# 
+# Android
+# 1. Utilisez le gestionnaire de fichiers de votre appareil et allez à .
+# internal_storage/android/data/com.generalmagic.magicearth/files/Download/MAGICEARTH/Data/Landmarks.
+# 2. Dans le dossier Landmarks, vous pouvez voir les fichiers \*.xlm pour vos Favoris, votre Historique et vos Alertes. Copiez simplement les fichiers souhaités sur votre ordinateur.
+# En savoir plus
+# Restauration de vos données à partir d'une sauvegarde
+# 
+
+
+
+Utiliser Magic Earth avec votre système Bluetooth
+# Lorsque vous naviguez avec Magic Earth et que votre téléphone est connecté à un appareil multimédia de la voiture, vous pouvez recevoir les instructions de navigation soit par les haut-parleurs de la voiture, soit par ceux de votre téléphone. Voici comment procéder :
+
+# Instructions de navigation sur les haut-parleurs de votre voiture
+# Lorsque vous connectez votre téléphone à un appareil multimédia de voiture, vous recevez par défaut les instructions de navigation sur les haut-parleurs de la voiture.
+# Toutefois, si :
+# - Pendant la navigation, vous écoutez de la musique de fond ou des podcasts sur le dispositif multimédia de la voiture ou
+# La configuration audio de votre système Bluetooth ne prend en charge que le profil mains libres (HFP). Vous devez activer l'option "Lire la voix comme appel téléphonique sur Bluetooth" dans Paramètres > Général > Son afin d'obtenir des instructions sur les haut-parleurs de la voiture.
+
+# Instructions de navigation sur le haut-parleur de votre téléphone
+# Pour obtenir les instructions de navigation sur le haut-parleur de votre téléphone, activez l'option "Lire le son sur le haut-parleur du téléphone" dans Réglages > Général > Son.
+# IMPORTANT : Lorsque l'option "Lire la voix comme appel téléphonique via Bluetooth" est activée, l'option "Lire le son sur le haut-parleur du téléphone" est désactivée et vice versa. Une seule des deux options peut être active à la fois. 
+
+# Instructions de navigation lors de l'écoute de musique de fond ou de podcasts
+# Si vous écoutez de la musique de fond ou des podcasts lorsque les instructions de navigation sont lues :
+# - sur Android, la musique ou le podcast sera coupé(e), atténué(e) ou mis(e) en pause, en fonction de la version d'Android et de la configuration sonore de l'autre application ou appareil multimédia de la voiture.
+# - sur iOS, la musique est atténuée et le podcast est mis en pause.
+# 
+# 
+Comment utiliser Magic Earth avec l'affichage tête haute (HUD)
+# Lorsque vous naviguez de nuit, vous pouvez utiliser Magic Earth avec l'affichage tête haute pour voir sur votre pare-brise toutes les informations de navigation clés (telles que la vitesse de la voiture, les limites de vitesse, les directions de navigation et le temps restant jusqu'à la destination).
+# Voici comment utiliser la fonction d'affichage tête haute de Magic Earth.
+# 1. Ouvrez Magic Earth.
+
+
+
+
+
+ 
+
+
+
+
+2. Appuyez sur Paramètres > Navigation > Voiture > Affichage tête haute et choisissez la disposition souhaitée.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. De retour sur la vue de la carte, tapez sur dans le coin supérieur droit de l'écran.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Définissez votre point de destination.
+# Pour cela, vous pouvez faire l'une des choses suivantes :
+# - taper le point de destination et le choisir dans les résultats de la recherche ou
+# - utiliser l'une des options de recherche disponibles dans la liste (Historique, Domicile, Travail... etc.)
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. Touchez Route et attendez que Magic Earth marque votre itinéraire sur la carte.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. Tapez sur Démarrer ou attendez que Magic Earth démarre la navigation.
+
+7. Posez votre appareil sous le pare-brise, l'écran vers le haut. Vous pouvez le placer en mode portrait ou paysage, selon vos préférences.
+
+
+
+
+
+
+
+
+
+
+
+
+8. Pour quitter l'écran HUD, il suffit de lever votre appareil.
+# Si vous souhaitez accéder à nouveau à l'écran HUD pendant la navigation, appuyez sur le coin inférieur gauche de l'écran, puis replacez votre appareil sur le tableau de bord.
+# Vous pouvez modifier le type de disposition de l'écran HUD ou désactiver cette fonction même pendant la navigation. Il vous suffit de lever votre appareil pour afficher la carte, de faire glisser la barre inférieure vers le haut, puis de toucher Paramètres > Affichage tête haute et de choisir l'une des options disponibles.
+
+Comment recevoir les avertissements ADAS
+# Lorsque vous naviguez avec Magic Earth, vous pouvez recevoir des notifications ADAS (Advanced Driver Assistance) pour augmenter votre sécurité sur la route.
+# Remarque : pour recevoir les avertissements ADAS, Magic Earth doit avoir la permission d'utiliser la caméra du téléphone. Celle-ci est utilisée par la fonction d'assistance avancée au conducteur pour capturer la route devant vous et vous avertir des problèmes de conduite potentiels. Allez dans les paramètres de votre téléphone > Magic Earth, puis activez l'option Caméra.
+
+Activez les avertissements ADAS dans Magic Earth.
+# Allez dans Réglages > AI Dash Cam
+# Activez l'assistance au conducteur
+# 
+# IMPORTANT :
+# Pendant la navigation, la caméra du téléphone doit avoir une vue dégagée de la route. L'appareil doit être monté sur le pare-brise de la voiture ou sur le tableau de bord, en mode paysage.
+# De plus, le téléphone ne doit pas être exposé à la lumière directe du soleil pendant de longues périodes, car cela pourrait entraîner une surchauffe et des changements indésirables dans le comportement de l'application. Pour protéger votre téléphone, lorsque la température intérieure de l'appareil dépasse la plage de fonctionnement normale, les fonctions ADAS et Enregistrement se désactivent et une icône de thermomètre s'affiche sur la barre de guidage, près de l'instruction de navigation.
+# 
+# 
+# 
+# 
+Apprendre la signification des icônes d'état et des avertissements ADAS
+# Voici un guide utile sur les icônes d'état que vous pouvez rencontrer et les avertissements d'assistance avancée à la conduite que vous pouvez recevoir lorsque vous naviguez avec Magic Earth.
+
+# Icônes d'état
+
+Calibrage
+# Le système avancé d'aide à la conduite s'initialise lorsque l'aide à la conduite est activée dans Paramètres > AI Dash Cam, que l'appareil est sur le support en mode paysage et que le véhicule commence à bouger.
+
+
+Active
+# Le système avancé d'assistance au conducteur est calibré et peut maintenant émettre des avertissements.
+
+
+
+ Ne fonctionne pas de manière optimale
+# Le système avancé d'aide à la conduite ne fonctionne pas de manière optimale en raison de : fortes pluies, mauvaise exposition, faible visibilité ou mouvement excessif.
+
+
+Inactif
+# Le dispositif a été retiré du support et le système avancé d'aide à la conduite n'est plus actif.
+
+
+
+#Avertissements ADAS
+
+Avertissement sur la distance à parcourir
+# La distance entre vous et le véhicule en mouvement qui vous précède devient dangereuse. À une vitesse supérieure à 30 km par heure, Magic Earth détecte les voitures, les bus, les camionnettes et les camions. 
+# Le symbole qui s'affiche sur l'écran du smartphone est accompagné d'un message sonore "Gardez la distance".
+
+
+
+Alerte de collision avant
+# Une collision imminente avec le véhicule qui vous précède a été détectée. L'alerte est émise jusqu'à 2,5 secondes avant la collision, ce qui laisse le temps de réagir. 
+# Le symbole clignotant affiché sur l'écran du smartphone est accompagné de 3 bips forts.
+
+
+
+
+# Alerte de franchissement de ligne 
+# Vous roulez à plus de 60 km à l'heure et le véhicule est sur le point de franchir la ligne continue.
+# Le symbole clignotant est accompagné d'un signal sonore disant "Restez dans votre voie".
+
+
+
+Avertissement de sortie de voie 
+# Vous roulez à plus de 60 km à l'heure et le véhicule est sur le point de franchir la ligne discontinue.
+# Le symbole clignotant est accompagné d'un signal sonore indiquant "Quittez votre voie".
+
+
+
+
+# Avertissement de collision avec un piéton 
+# Vous roulez à moins de 60 km à l'heure et il y a des piétons en mouvement ou à l'arrêt jusqu'à 50 mètres devant le véhicule.
+# Le symbole clignotant affiché sur l'écran du smartphone est accompagné de 3 bips forts.
+
+
+
+
+
+# Assistance Stop & Go - Attention au véhicule
+# Vous roulez à moins de 30 km par heure et la distance avec le véhicule à l'arrêt devant vous devient dangereuse. Le symbole s'affiche sur l'écran du smartphone et un avertissement sonore est émis disant "Attention au véhicule".
+
+
+
+
+
+# Assistance Stop & Go - Trafic en mouvement
+# Lorsque le trafic commence à se déplacer après un arrêt devant un feu rouge ou dans un embouteillage, le symbole s'affiche sur l'écran du smartphone et un avertissement audio est émis en disant "Trafic en mouvement".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
